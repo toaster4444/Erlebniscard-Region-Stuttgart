@@ -367,8 +367,252 @@ export const ATTRACTIONS: Attraction[] = [
     image: { thumbUrl: "/images/placeholder/wasserspass/vinzenz.jpg" },
   },
 
-  // =========================================================
-  // Andere Kategorien (kommen als nächstes)
-  // =========================================================
-  // AKTIV_UNTERWEGS, MUSEUM_KULTUR, STADTERLEBNIS, AUSFLUGSZIELE
-];
+// =========================================================
+// AKTIV UNTERWEGS – recherchiert
+// =========================================================
+
+{
+  id: "aktiv-adventure-golf-vaihingen-enz",
+  category: "AKTIV_UNTERWEGS",
+  name: "Adventure Golf Vaihingen an der Enz",
+  shortTitle: "Adventure Golf",
+  included: "Eintritt frei",
+  description:
+    "Abwechslungsreiche Adventure-Golf-Anlage mit thematisch gestalteten Bahnen – für Familien und Gruppen geeignet.",
+  address: {
+    street: "Walter-de-Pay-Straße 10",
+    zip: "71665",
+    city: "Vaihingen an der Enz",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Walter-de-Pay-Stra%C3%9Fe+10%2C+71665+Vaihingen+an+der+Enz",
+  openingHours: [
+    {
+      days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Saison- und wetterabhängig. Öffnungszeiten variieren – bitte vorab online prüfen.",
+    },
+  ],
+  seasonNote: "Saisonbetrieb (typisch Frühjahr bis Herbst).",
+  image: { thumbUrl: "/images/placeholder/aktiv/adventure-golf.jpg" },
+},
+
+{
+  id: "aktiv-citygolf-stuttgart",
+  category: "AKTIV_UNTERWEGS",
+  name: "CITYGOLF Stuttgart",
+  shortTitle: "CityGolf",
+  included: "Tages-Greenfee",
+  description:
+    "Urbanes Golf-Erlebnis mitten in Stuttgart – Golf spielen ohne Clubmitgliedschaft.",
+  address: {
+    street: "Am Schnarrenberg 10",
+    zip: "70376",
+    city: "Stuttgart",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Am+Schnarrenberg+10%2C+70376+Stuttgart",
+  openingHours: [
+    {
+      days: ["Mo", "Di", "Mi", "Do", "Fr"],
+      from: "10:00",
+      to: "22:00",
+    },
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "09:00",
+      to: "22:00",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/aktiv/citygolf.jpg" },
+},
+
+{
+  id: "aktiv-polarion-bad-liebenzell",
+  category: "AKTIV_UNTERWEGS",
+  name: "Eisstadion Polarion Bad Liebenzell",
+  shortTitle: "Polarion",
+  included: "Tageskarte",
+  description:
+    "Eisstadion mit öffentlichem Eislauf, Discolauf und Familienangeboten.",
+  address: {
+    street: "Talwiesen 15",
+    zip: "75378",
+    city: "Bad Liebenzell",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Talwiesen+15%2C+75378+Bad+Liebenzell",
+  openingHours: [
+    {
+      days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Öffentlicher Eislauf nur zu ausgewählten Zeiten – tagesaktuellen Eisplan online prüfen.",
+    },
+  ],
+  seasonNote: "Saisonbetrieb (typisch Herbst bis Frühjahr).",
+  image: { thumbUrl: "/images/placeholder/aktiv/polarion.jpg" },
+},
+
+{
+  id: "aktiv-entdeckerwelt-bad-urach",
+  category: "AKTIV_UNTERWEGS",
+  name: "Entdeckerwelt Bad Urach",
+  shortTitle: "Entdeckerwelt",
+  included: "Eintritt frei inkl. Tablet-Ausleihe",
+  description:
+    "Interaktive Erlebniswelt mit digitalen Entdeckertouren rund um Bad Urach.",
+  address: {
+    street: "Marktplatz 1",
+    zip: "72574",
+    city: "Bad Urach",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Marktplatz+1%2C+72574+Bad+Urach",
+  openingHours: [
+    {
+      days: ["Mo", "Di", "Mi", "Do", "Fr"],
+      from: "10:00",
+      to: "17:00",
+    },
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "10:00",
+      to: "16:00",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/aktiv/entdeckerwelt.jpg" },
+},
+
+{
+  id: "aktiv-golfkultur-stuttgart",
+  category: "AKTIV_UNTERWEGS",
+  name: "GolfKultur Stuttgart",
+  shortTitle: "GolfKultur",
+  included:
+    "Kostenfreies Rangepaket inkl. Leihschläger + Tages-Rangefee inkl. 70 Bälle",
+  description:
+    "Moderne Golf-Range mit Trainingsflächen und Kurzplatz ‚Little Augusta‘.",
+  address: {
+    street: "Schönbuchstraße 2",
+    zip: "71032",
+    city: "Böblingen",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Sch%C3%B6nbuchstra%C3%9Fe+2%2C+71032+B%C3%B6blingen",
+  openingHours: [
+    {
+      days: ["Mo", "Di", "Mi", "Do", "Fr"],
+      from: "07:00",
+      to: "22:00",
+    },
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "08:00",
+      to: "21:00",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/aktiv/golfkultur.jpg" },
+},
+
+{
+  id: "aktiv-pause-play-escaperooms",
+  category: "AKTIV_UNTERWEGS",
+  name: "pause & play EscapeRooms Stuttgart",
+  shortTitle: "EscapeRooms",
+  included: "20 % Rabatt",
+  description:
+    "Live Escape Rooms mit verschiedenen Themen – Teamwork und Rätselspaß.",
+  address: {
+    street: "Wagrainstraße 140",
+    zip: "70378",
+    city: "Stuttgart",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Wagrainstra%C3%9Fe+140%2C+70378+Stuttgart",
+  openingHours: [
+    {
+      days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+      from: "10:00",
+      to: "22:00",
+      note: "Spieltimes nach Reservierung",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/aktiv/escape.jpg" },
+},
+
+{
+  id: "aktiv-skypark-epia-schwaebisch-gmuend",
+  category: "AKTIV_UNTERWEGS",
+  name: "SKYPARK epia Kletterwald Schwäbisch Gmünd",
+  shortTitle: "SKYPARK epia",
+  included: "Tageskarte",
+  description:
+    "Hochseilgarten mit Parcours verschiedener Schwierigkeitsgrade in Waldlage.",
+  address: {
+    street: "Himmelsgarten 1",
+    zip: "73527",
+    city: "Schwäbisch Gmünd",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Himmelsgarten+1%2C+73527+Schw%C3%A4bisch+Gm%C3%BCnd",
+  openingHours: [
+    {
+      days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Saison- und wetterabhängig; Öffnung meist ab Vormittag – bitte online prüfen.",
+    },
+  ],
+  seasonNote: "Saisonbetrieb (typisch April–Oktober).",
+  image: { thumbUrl: "/images/placeholder/aktiv/kletterwald.jpg" },
+},
+
+{
+  id: "aktiv-sprungbude-bad-cannstatt",
+  category: "AKTIV_UNTERWEGS",
+  name: "Sprungbude Bad Cannstatt",
+  shortTitle: "Sprungbude",
+  included: "60 Minuten Sprungzeit",
+  description:
+    "Trampolinpark mit Ninja-Parcours, Sprungflächen und Action-Arealen.",
+  address: {
+    street: "Augsburger Straße 606",
+    zip: "70329",
+    city: "Stuttgart",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Augsburger+Stra%C3%9Fe+606%2C+70329+Stuttgart",
+  openingHours: [
+    { days: ["Mo", "Di", "Mi", "Do", "Fr"], from: "14:00", to: "21:00" },
+    { days: ["Sa", "So", "Feiertag"], from: "10:00", to: "20:00" },
+  ],
+  image: { thumbUrl: "/images/placeholder/aktiv/sprungbude.jpg" },
+},
+
+{
+  id: "aktiv-sprungbude-filderstadt",
+  category: "AKTIV_UNTERWEGS",
+  name: "Sprungbude Filderstadt",
+  shortTitle: "Sprungbude",
+  included: "60 Minuten Sprungzeit",
+  description:
+    "Großer Trampolinpark nahe Flughafen Stuttgart – ideal für Familien und Gruppen.",
+  address: {
+    street: "Gutenbergstraße 30",
+    zip: "70794",
+    city: "Filderstadt",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Gutenbergstra%C3%9Fe+30%2C+70794+Filderstadt",
+  openingHours: [
+    { days: ["Mo", "Di", "Mi", "Do", "Fr"], from: "14:00", to: "21:00" },
+    { days: ["Sa", "So", "Feiertag"], from: "10:00", to: "20:00" },
+  ],
+  image: { thumbUrl: "/images/placeholder/aktiv/sprungbude.jpg" },
+},
+
