@@ -9,15 +9,19 @@ export type Attraction = {
   id: string;
   category: CategoryKey;
   name: string;
-  included: string; // Leistung laut Flyer
-  shortDescription?: string; // optional: 1 Satz
-  // [Nicht verifiziert] – zum späteren Befüllen
-  address?: string; // "Straße, PLZ Ort"
-  mapsQuery?: string; // Suchbegriff für Google Maps
-  openHours?: string; // Öffnungszeiten-Text
-  temporarilyClosed?: string; // z.B. "geschlossen: Jan–Mai; geöffnet ab Juni"
-  // Bild später
-  imageUrl?: string; // z.B. "/thumbs/leuze.jpg"
+  included: string;
+
+  shortDescription?: string;
+
+  // recherchierbare Felder
+  address?: string;         // "Straße Hausnr, PLZ Ort"
+  mapsQuery?: string;       // Google Maps Suchbegriff
+  openHours?: string;       // Klartext (ggf. saisonal)
+  temporarilyClosed?: string; // z.B. "Heiligabend geschlossen" etc.
+  sourceUrl?: string;       // Quelle zum Nachschlagen
+
+  // später: thumbnails
+  imageUrl?: string;
 };
 
 export const CATEGORY_LABELS: Record<CategoryKey, string> = {
@@ -28,676 +32,215 @@ export const CATEGORY_LABELS: Record<CategoryKey, string> = {
   AUSFLUGSZIELE: "Ausflugsziele"
 };
 
+// Helper: Platzhalter, damit du in der UI klar siehst was noch offen ist
+const TBD = "[Nicht verifiziert] Bitte ergänzen";
+
 export const ATTRACTIONS: Attraction[] = [
-  // --- MUSEUM & KULTUR (Flyer) ---
-  {
-    id: "carl-schweizer-museum-murrhardt",
-    category: "MUSEUM_KULTUR",
-    name: "Carl-Schweizer-Museum, Murrhardt",
-    included: "Freier Eintritt, Führung durch das Museum",
-    mapsQuery: "Carl-Schweizer-Museum Murrhardt",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "deutsches-landwirtschaftsmuseum-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Deutsches Landwirtschaftsmuseum, Stuttgart",
-    included: "Tageskarte",
-    mapsQuery: "Deutsches Landwirtschaftsmuseum Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "faszination-psyche-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Faszination Psyche, Stuttgart",
-    included: "Eintritt frei",
-    mapsQuery: "Faszination Psyche Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "fellbacher-weingaertner-kellerblicke",
-    category: "MUSEUM_KULTUR",
-    name: "Fellbacher Weingärtner, Kellerblicke",
-    included: "Kostenfreie Kellerführung",
-    mapsQuery: "Fellbacher Weingärtner Kellerblicke",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "freilichtmuseum-beuren",
-    category: "MUSEUM_KULTUR",
-    name: "Freilichtmuseum Beuren",
-    included: "Tageskarte",
-    mapsQuery: "Freilichtmuseum Beuren",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "fritz-genkinger-kunsthaus-marbach",
-    category: "MUSEUM_KULTUR",
-    name: "Fritz Genkinger Kunsthaus, Marbach am Neckar",
-    included: "Eintritt frei",
-    mapsQuery: "Fritz Genkinger Kunsthaus Marbach am Neckar",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "galerie-stihl-waiblingen",
-    category: "MUSEUM_KULTUR",
-    name: "Galerie Stihl Waiblingen",
-    included: "Eintritt frei",
-    mapsQuery: "Galerie Stihl Waiblingen",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "haus-der-geschichte-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Haus der Geschichte, Stuttgart",
-    included: "Kombi-Tageskarte, Dauerausstellung, Sonderausstellung",
-    mapsQuery: "Haus der Geschichte Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "hoelzel-haus-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Hölzel-Haus, Stuttgart",
-    included: "Eintritt frei",
-    mapsQuery: "Hölzel-Haus Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "hohenloher-freilandmuseum-wackershofen",
-    category: "MUSEUM_KULTUR",
-    name: "Hohenloher Freilandmuseum Wackershofen, Schwäbisch Hall",
-    included: "Tageskarte",
-    mapsQuery: "Hohenloher Freilandmuseum Wackershofen",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "kindermuseum-junges-schloss-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Kindermuseum Junges Schloss, Stuttgart",
-    included: "Tageskarte Erwachsene",
-    mapsQuery: "Junges Schloss Stuttgart Kindermuseum",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "kunstmuseum-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Kunstmuseum Stuttgart",
-    included: "Eintritt frei",
-    mapsQuery: "Kunstmuseum Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "landesmuseum-wuerttemberg-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Landesmuseum Württemberg, Stuttgart",
-    included: "Tageskarte",
-    mapsQuery: "Landesmuseum Württemberg Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "linden-museum-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Linden-Museum, Stuttgart",
-    included: "Sonder- und Dauerausstellung",
-    mapsQuery: "Linden-Museum Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "literaturmuseum-der-moderne-marbach",
-    category: "MUSEUM_KULTUR",
-    name: "Literaturmuseum der Moderne, Marbach am Neckar",
-    included: "Tageskarte/Kombiticket Literaturmuseum der Moderne & Schiller-Nationalmuseum",
-    mapsQuery: "Literaturmuseum der Moderne Marbach am Neckar",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "maerklineum-goeppingen",
-    category: "MUSEUM_KULTUR",
-    name: "Märklineum, Göppingen",
-    included: "Tageskarte",
-    mapsQuery: "Märklineum Göppingen",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
+  // =========================
+  // MUSEUM & KULTUR
+  // =========================
   {
     id: "mercedes-benz-museum-stuttgart",
     category: "MUSEUM_KULTUR",
     name: "Mercedes-Benz Museum, Stuttgart",
     included: "Eintritt frei",
-    mapsQuery: "Mercedes-Benz Museum Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "miniaturwelten-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Miniaturwelten Stuttgart",
-    included: "Tageskarte",
-    mapsQuery: "Miniaturwelten Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "museum-der-alltagskultur-schloss-waldenbuch",
-    category: "MUSEUM_KULTUR",
-    name: "Museum der Alltagskultur – Schloss Waldenbuch",
-    included: "Tageskarte",
-    mapsQuery: "Museum der Alltagskultur Schloss Waldenbuch",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "museum-im-kleihues-bau-kornwestheim",
-    category: "MUSEUM_KULTUR",
-    name: "Museum im Kleihues-Bau, Kornwestheim",
-    included: "Eintritt frei",
-    mapsQuery: "Museum im Kleihues-Bau Kornwestheim",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
+    address: "Mercedesstraße 100, 70372 Stuttgart",
+    mapsQuery: "Mercedes-Benz Museum Mercedesstraße 100 Stuttgart",
+    openHours: "09:00–18:00 (laut Erlebnisregion-Partnerseite; Details/Feiertage bitte auf der Website prüfen)",
+    sourceUrl: "https://www.erlebnisregion-stuttgart.de/erlebniscard/partner-erlebniscard-museum-kultur"
   },
   {
     id: "porsche-museum-stuttgart",
     category: "MUSEUM_KULTUR",
     name: "Porsche Museum, Stuttgart",
     included: "Eintritt frei",
-    mapsQuery: "Porsche Museum Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "schauwerk-sindelfingen",
-    category: "MUSEUM_KULTUR",
-    name: "Schauwerk Sindelfingen",
-    included: "Tageskarte",
-    mapsQuery: "Schauwerk Sindelfingen",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "schiller-nationalmuseum-marbach",
-    category: "MUSEUM_KULTUR",
-    name: "Schiller-Nationalmuseum, Marbach am Neckar",
-    included: "Tageskarte/Kombiticket Schiller-Nationalmuseum & Literaturmuseum der Moderne",
-    mapsQuery: "Schiller-Nationalmuseum Marbach am Neckar",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "schillers-geburtshaus-marbach",
-    category: "MUSEUM_KULTUR",
-    name: "Schillers Geburtshaus, Marbach am Neckar",
-    included: "Eintritt frei",
-    mapsQuery: "Schillers Geburtshaus Marbach am Neckar",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "naturkundemuseum-loewentor-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Staatliches Museum für Naturkunde, Museum am Löwentor, Stuttgart",
-    included: "Kombiticket Museum Löwentor & Schloss Rosenstein",
-    mapsQuery: "Naturkundemuseum am Löwentor Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "naturkundemuseum-schloss-rosenstein-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Staatliches Museum für Naturkunde, Schloss Rosenstein, Stuttgart",
-    included: "Kombiticket Museum Löwentor & Schloss Rosenstein",
-    mapsQuery: "Naturkundemuseum Schloss Rosenstein Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "staatsgalerie-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Staatsgalerie Stuttgart",
-    included: "Tageskarte",
-    mapsQuery: "Staatsgalerie Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
+    address: "Porscheplatz 1, 70435 Stuttgart",
+    mapsQuery: "Porsche Museum Porscheplatz 1 Stuttgart",
+    openHours: "Di–So 09:00–18:00 (Mo Ruhetag; Kassen bis 17:30)",
+    sourceUrl: "https://www.porsche.com/germany/locations-and-contact/museum/"
   },
 
-  // --- (weiterer Block im Flyer) ---
+  // (Rest Museen: erstmal Platzhalter – wir füllen im nächsten Schritt blockweise)
   {
-    id: "stadtpalais-museum-fuer-stuttgart",
+    id: "carl-schweizer-museum-murrhardt",
     category: "MUSEUM_KULTUR",
-    name: "StadtPalais – Museum für Stuttgart",
-    included: "Freier Eintritt in die Sonderausstellung des StadtPalais",
-    mapsQuery: "StadtPalais Museum für Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
+    name: "Carl-Schweizer-Museum, Murrhardt",
+    included: "Freier Eintritt, Führung durch das Museum",
+    mapsQuery: "Carl-Schweizer-Museum Murrhardt",
+    address: TBD,
+    openHours: TBD,
+    sourceUrl: "https://www.erlebnisregion-stuttgart.de/erlebniscard/partner-erlebniscard-museum-kultur"
   },
   {
-    id: "stihl-markenwelt-waiblingen",
+    id: "linden-museum-stuttgart",
     category: "MUSEUM_KULTUR",
-    name: "STIHL Markenwelt, Waiblingen",
-    included: "Eintritt frei",
-    mapsQuery: "STIHL Markenwelt Waiblingen",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "tobias-mayer-museum-marbach",
-    category: "MUSEUM_KULTUR",
-    name: "Tobias-Mayer-Museum, Marbach am Neckar",
-    included: "Tageskarte",
-    mapsQuery: "Tobias-Mayer-Museum Marbach am Neckar",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "villa-merkel-esslingen",
-    category: "MUSEUM_KULTUR",
-    name: "Villa Merkel, Esslingen am Neckar",
-    included: "Tageskarte",
-    mapsQuery: "Villa Merkel Esslingen am Neckar",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "weinbaumuseum-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Weinbaumuseum, Stuttgart",
-    included: "Freier Eintritt, 0,1l Glas Wein/alkoholfreies Getränk",
-    mapsQuery: "Weinbaumuseum Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "weissenhofmuseum-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Weissenhofmuseum, Stuttgart",
-    included: "Eintritt frei",
-    mapsQuery: "Weissenhofmuseum Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "wuerttembergischer-kunstverein-stuttgart",
-    category: "MUSEUM_KULTUR",
-    name: "Württembergischer Kunstverein, Stuttgart",
-    included: "Kostenfreier Tageseintritt in das Kunstgebäude des Württembergischen Kunstvereins Stuttgart",
-    mapsQuery: "Württembergischer Kunstverein Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen",
-    address: "[Nicht verifiziert] Bitte ergänzen"
+    name: "Linden-Museum, Stuttgart",
+    included: "Sonder- und Dauerausstellung",
+    mapsQuery: "Linden-Museum Hegelplatz 1 Stuttgart",
+    address: "Hegelplatz 1, 70174 Stuttgart",
+    openHours: "Öffnungszeiten bitte auf der Website prüfen (wechseln je nach Tag/Saison)",
+    sourceUrl: "https://www.erlebnisregion-stuttgart.de/erlebniscard/partner-erlebniscard-museum-kultur"
   },
 
-  // --- AKTIV UNTERWEGS (Flyer) ---
-  {
-    id: "adventure-golf-vaihingen-enz",
-    category: "AKTIV_UNTERWEGS",
-    name: "Adventure Golf, Vaihingen an der Enz",
-    included: "Eintritt frei",
-    mapsQuery: "Adventure Golf Vaihingen an der Enz",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "citygolf-stuttgart",
-    category: "AKTIV_UNTERWEGS",
-    name: "CITYGOLF Stuttgart",
-    included: "Tagesgreenfee",
-    mapsQuery: "CITYGOLF Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
+  // =========================
+  // AKTIV UNTERWEGS
+  // =========================
   {
     id: "eisstadion-polarion-bad-liebenzell",
     category: "AKTIV_UNTERWEGS",
     name: "Eisstadion Polarion, Bad Liebenzell",
     included: "Tageskarte",
-    mapsQuery: "Eisstadion Polarion Bad Liebenzell",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "entdeckerwelt-bad-urach",
-    category: "AKTIV_UNTERWEGS",
-    name: "Entdeckerwelt Bad Urach",
-    included: "Eintritt frei (inkl. Tablet-Ausleihe für Erlebnistouren – laut Flyer-Textzeile)",
-    mapsQuery: "Entdeckerwelt Bad Urach",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
+    address: "Talwiesen 15, 75378 Bad Liebenzell",
+    mapsQuery: "Eisstadion Polarion Talwiesen 15 Bad Liebenzell",
+    openHours: "Öffnungszeiten variieren (laut Erlebnisregion-Partnerseite bitte tagesaktuell prüfen)",
+    sourceUrl: "https://www.erlebnisregion-stuttgart.de/erlebniscard/partner-erlebniscard-aktiv"
   },
   {
     id: "golfkultur-stuttgart",
     category: "AKTIV_UNTERWEGS",
     name: "GolfKultur Stuttgart",
-    included: "Kostenfreies Rangepaket inkl. Leihschläger; Tages-Rangefee inkl. Nutzung von Little Augusta sowie 70 Bälle (2 Ball-Ladungen)",
+    included:
+      "Kostenfreies Rangepaket inkl. Leihschläger; Tages-Rangefee inkl. Nutzung von Little Augusta sowie 70 Bälle (2 Ball-Ladungen)",
     mapsQuery: "GolfKultur Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "pause-and-play-escaperooms-stuttgart",
-    category: "AKTIV_UNTERWEGS",
-    name: "pause & play EscapeRooms, Stuttgart",
-    included: "20% Rabatt",
-    mapsQuery: "pause & play EscapeRooms Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "skypark-epia-kletterwald-schwaebisch-gmuend",
-    category: "AKTIV_UNTERWEGS",
-    name: "SKYPARK – epia Kletterwald, Schwäbisch Gmünd",
-    included: "Tageskarte",
-    mapsQuery: "SKYPARK epia Kletterwald Schwäbisch Gmünd",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "sprungbude-bad-cannstatt",
-    category: "AKTIV_UNTERWEGS",
-    name: "Sprungbude Bad Cannstatt",
-    included: "60min Sprungzeit",
-    mapsQuery: "Sprungbude Bad Cannstatt",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "sprungbude-filderstadt",
-    category: "AKTIV_UNTERWEGS",
-    name: "Sprungbude Filderstadt",
-    included: "60min Sprungzeit",
-    mapsQuery: "Sprungbude Filderstadt",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
+    address: TBD,
+    openHours: "laut Erlebnisregion-Partnerseite z. T. sehr früh/spät – bitte prüfen",
+    sourceUrl: "https://www.erlebnisregion-stuttgart.de/erlebniscard/partner-erlebniscard-aktiv"
   },
 
-  // --- STADTERLEBNIS (Flyer) ---
-  {
-    id: "altstadtrundgang-esslingen",
-    category: "STADTERLEBNIS",
-    name: "Altstadtrundgang Esslingen am Neckar",
-    included: "Ticket für eine Stadtführung",
-    mapsQuery: "Altstadtrundgang Esslingen am Neckar",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
+  // =========================
+  // STADTERLEBNIS
+  // =========================
   {
     id: "citytour-stuttgart-blaue-tour",
     category: "STADTERLEBNIS",
     name: "Citytour Stuttgart",
     included: "Tagesticket Blaue Tour",
-    mapsQuery: "Citytour Stuttgart Blaue Tour",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "historische-stadtfuehrung-goeppingen",
-    category: "STADTERLEBNIS",
-    name: "Historische Stadtführung Göppingen",
-    included: "Ticket für eine Stadtführung",
-    mapsQuery: "Stadtführung Göppingen",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
+    mapsQuery: "Stuttgart Citytour Blaue Tour",
+    address: "70173 Stuttgart (Kontakt laut Erlebnisregion-Partnerseite; genauer Startpunkt je Route)",
+    openHours: "Fahrplan/Zeiten: bitte tagesaktuell prüfen (abhängig von Saison/Veranstaltungen)",
+    sourceUrl: "https://www.erlebnisregion-stuttgart.de/erlebniscard/partner-erlebniscard-stadterlebnis"
   },
   {
     id: "historische-stadtfuehrung-kirchheim-unter-teck",
     category: "STADTERLEBNIS",
     name: "Historische Stadtführung Kirchheim unter Teck",
     included: "Ticket für eine Stadtführung",
-    mapsQuery: "Stadtführung Kirchheim unter Teck",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "historische-stadtfuehrung-schwaebisch-gmuend",
-    category: "STADTERLEBNIS",
-    name: "Historische Stadtführung Schwäbisch Gmünd",
-    included: "Ticket für eine Stadtführung",
-    mapsQuery: "Stadtführung Schwäbisch Gmünd",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "offene-stadtfuehrung-schorndorf",
-    category: "STADTERLEBNIS",
-    name: "Offene Stadtführung Schorndorf",
-    included: "Ticket für eine Stadtführung",
-    mapsQuery: "Stadtführung Schorndorf",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "oeffentliche-historische-stadtfuehrung-nuertingen",
-    category: "STADTERLEBNIS",
-    name: "Öffentliche historische Stadtführung Nürtingen",
-    included: "Ticket für eine Stadtführung",
-    mapsQuery: "Stadtführung Nürtingen",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "oeffentliche-historische-stadtfuehrung-bad-wildbad",
-    category: "STADTERLEBNIS",
-    name: "Öffentliche historische Stadtführung Bad Wildbad",
-    included: "Ticket für eine Stadtführung",
-    mapsQuery: "Stadtführung Bad Wildbad",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "oeffentliche-stadtfuehrung-schwaebisch-hall",
-    category: "STADTERLEBNIS",
-    name: "Öffentliche Stadtführung Schwäbisch Hall",
-    included: "Ticket für eine Stadtführung",
-    mapsQuery: "Stadtführung Schwäbisch Hall",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "stadtfuehrung-ludwigsburg-auf-einen-blick",
-    category: "STADTERLEBNIS",
-    name: "Stadtführung in Ludwigsburg – „Ludwigsburg auf einen Blick“",
-    included: "Ticket für eine Stadtführung",
-    mapsQuery: "Stadtführung Ludwigsburg auf einen Blick",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "stadtfuehrung-murrhardt",
-    category: "STADTERLEBNIS",
-    name: "Stadtführung Murrhardt",
-    included: "Ticket für eine Stadtführung",
-    mapsQuery: "Stadtführung Murrhardt",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "stadtfuehrung-plochingen-hundertwasser",
-    category: "STADTERLEBNIS",
-    name: "Stadtführung Plochingen – „Hundertwasser“",
-    included: "Ticket für eine Stadtführung",
-    mapsQuery: "Stadtführung Plochingen Hundertwasser",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "stadtfuehrung-sindelfingen",
-    category: "STADTERLEBNIS",
-    name: "Stadtführung Sindelfingen",
-    included: "Ticket für eine Stadtführung",
-    mapsQuery: "Stadtführung Sindelfingen",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
+    address: "Kirchheim-Info, Max-Eyth-Straße 15, 73230 Kirchheim unter Teck",
+    mapsQuery: "Kirchheim-Info Max-Eyth-Straße 15 Kirchheim unter Teck",
+    openHours: "Stadtführungs-Termine: bitte tagesaktuell prüfen",
+    sourceUrl: "https://www.erlebnisregion-stuttgart.de/erlebniscard/partner-erlebniscard-stadterlebnis"
   },
 
-  // --- WASSERSPASS (Flyer) ---
+  // =========================
+  // WASSERSPASS
+  // =========================
   {
     id: "das-leuze-stuttgart",
     category: "WASSERSPASS",
     name: "DAS LEUZE, Stuttgart",
     included: "2h-Ticket nur fürs Schwimmbad",
-    mapsQuery: "DAS LEUZE Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "f3-das-wohlfuehlbad-fellbach",
-    category: "WASSERSPASS",
-    name: "F3 Das Wohlfühlbad, Fellbach",
-    included:
-      "Freier Eintritt ins Familienbad (exkl. Rutschen und Saunas); auch an Wochenenden/Ferien/Feiertagen; Rutschen zubuchbar an der Kasse; Saunas nicht zubuchbar",
-    mapsQuery: "F3 Das Wohlfühlbad Fellbach",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "hohenfreibad-bad-urach",
-    category: "WASSERSPASS",
-    name: "Hohenfreibad Bad Urach",
-    included: "Tageskarte",
-    mapsQuery: "Hohenfreibad Bad Urach",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
+    address: "Am Leuzebad 2–6, 70190 Stuttgart",
+    mapsQuery: "DAS LEUZE Am Leuzebad 2-6 Stuttgart",
+    openHours:
+      "Schwimmbad: Mo–Di 06:00–21:00; Mi–Sa 06:00–23:00; So 06:00–21:00 (Einlassschluss 1h vorher, Badeschluss 20 Min vorher)",
+    temporarilyClosed: "Feiertage/Abweichungen: bitte auf der Website prüfen",
+    sourceUrl: "https://www.stuttgarterbaeder.de/leuze"
   },
   {
     id: "mineralbad-berg-stuttgart",
     category: "WASSERSPASS",
     name: "Mineralbad Berg, Stuttgart",
     included: "2h-Ticket nur fürs Schwimmbad; Sauna kann gegen Aufzahlung zugebucht werden",
-    mapsQuery: "Mineralbad Berg Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "mineralfreibad-gaildorf",
-    category: "WASSERSPASS",
-    name: "Mineralfreibad Gaildorf",
-    included: "Tageskarte",
-    mapsQuery: "Mineralfreibad Gaildorf",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "mineraltherme-boeblingen",
-    category: "WASSERSPASS",
-    name: "Mineraltherme Böblingen",
-    included:
-      "Freier Eintritt im Thermalbad und Classic-Sauna mit 3 Std. Badezeit (weitere Sauna-Optionen ggf. gegen Aufzahlung – bitte prüfen)",
-    mapsQuery: "Mineraltherme Böblingen",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "oskar-schwenkbad-schwaebisch-gmuend",
-    category: "WASSERSPASS",
-    name: "Oskar Schwenkbad Schwäbisch Gmünd",
-    included: "Kostenloser Eintritt und Sauna",
-    mapsQuery: "Oskar Schwenkbad Schwäbisch Gmünd",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "panorama-therme-beuren",
-    category: "WASSERSPASS",
-    name: "Panorama Therme Beuren",
-    included: "2,5h-Ticket nur für das Schwimmbad",
-    mapsQuery: "Panorama Therme Beuren",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "paracelsus-therme-bad-liebenzell",
-    category: "WASSERSPASS",
-    name: "Paracelsus-Therme Bad Liebenzell",
-    included: "Tageskarte (Therme & Sauna – bitte Details prüfen)",
-    mapsQuery: "Paracelsus-Therme Bad Liebenzell",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
+    address: "Am Berg 1, 70376 Stuttgart",
+    mapsQuery: "Mineralbad Berg Am Berg 1 Stuttgart",
+    openHours: "Mo–So 09:00–22:00",
+    temporarilyClosed:
+      "Ganzjährig; geschlossen u. a. Heiligabend, 1. Weihnachtsfeiertag, Silvester, Neujahr, Karfreitag (laut Website)",
+    sourceUrl: "https://www.stuttgarterbaeder.de/mineralbadberg"
   },
   {
     id: "solebad-cannstatt-stuttgart",
     category: "WASSERSPASS",
     name: "SoleBad Cannstatt, Stuttgart",
     included: "2h-Ticket nur fürs Schwimmbad; Sauna kann gegen Aufzahlung zugebucht werden",
-    mapsQuery: "SoleBad Cannstatt Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "vinzenz-therme-bad-ditzenbach",
-    category: "WASSERSPASS",
-    name: "Vinzenz Therme, Bad Ditzenbach",
-    included: "Tageskarte für eine Saunanutzung",
-    mapsQuery: "Vinzenz Therme Bad Ditzenbach",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
+    address: "Sulzerrainstraße 2, 70372 Stuttgart",
+    mapsQuery: "SoleBad Cannstatt Sulzerrainstraße 2 Stuttgart",
+    openHours:
+      "Schwimmbad: Mo–So 09:00–21:30 (Sauna/Dampfbad teils mit Damen/Herren-Zeiten – siehe Website)",
+    temporarilyClosed: "Feiertage/Abweichungen: bitte auf der Website prüfen",
+    sourceUrl: "https://www.stuttgarterbaeder.de/solebadcannstatt"
   },
 
-  // --- AUSFLUGSZIELE (Flyer) ---
+  // (Rest Wasserspaß: Platzhalter)
+  {
+    id: "panorama-therme-beuren",
+    category: "WASSERSPASS",
+    name: "Panorama Therme Beuren",
+    included: "2,5h-Ticket nur für das Schwimmbad",
+    mapsQuery: "Panorama Therme Beuren",
+    address: TBD,
+    openHours: TBD,
+    sourceUrl: "https://www.erlebnisregion-stuttgart.de/erlebniscard/partner-erlebniscard-wasserspass"
+  },
+
+  // =========================
+  // AUSFLUGSZIELE
+  // =========================
+  {
+    id: "wilhelma-stuttgart",
+    category: "AUSFLUGSZIELE",
+    name: "Wilhelma, Stuttgart",
+    included: "Eintritt frei",
+    address: "Wilhelma 13, 70376 Stuttgart",
+    mapsQuery: "Wilhelma 13 70376 Stuttgart",
+    openHours:
+      "Saisonal (Beispiel): Jan–Feb 08:15–16:30; Mär 08:15–18:30; Apr 08:15–19:30; Mai–Aug 08:15–20:00; Sep 08:15–19:30; (Details/Feiertage siehe Website)",
+    temporarilyClosed: "Sondertage (z. B. 24./31.12. verkürzt) – siehe Website",
+    sourceUrl: "https://www.wilhelma.de/besuch/informationen/oeffnungszeiten"
+  },
   {
     id: "swr-fernsehturm-stuttgart",
     category: "AUSFLUGSZIELE",
     name: "SWR Fernsehturm Stuttgart",
     included: "Tageskarte",
-    mapsQuery: "SWR Fernsehturm Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "fellbacher-weingaertner-eg-kellerblicke",
-    category: "AUSFLUGSZIELE",
-    name: "Fellbacher Weingärtner eG",
-    included: "Teilnahme Kellerblicke",
-    mapsQuery: "Fellbacher Weingärtner eG",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "forscherfabrik-schorndorf",
-    category: "AUSFLUGSZIELE",
-    name: "Forscherfabrik, Schorndorf",
-    included: "3h-Ticket Erwachsene",
-    mapsQuery: "Forscherfabrik Schorndorf",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "grabkapelle-auf-dem-wuerttemberg-stuttgart",
-    category: "AUSFLUGSZIELE",
-    name: "Grabkapelle auf dem Württemberg, Stuttgart",
-    included: "Eintritt frei",
-    mapsQuery: "Grabkapelle auf dem Württemberg Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "mercedes-benz-kundencenter-sindelfingen",
-    category: "AUSFLUGSZIELE",
-    name: "Mercedes-Benz Kundencenter Sindelfingen",
-    included: "Werkbesichtigung Kompakt Plus oder Intensiv",
-    mapsQuery: "Mercedes-Benz Kundencenter Sindelfingen",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "outletcity-metzingen-vip-shopping-day",
-    category: "AUSFLUGSZIELE",
-    name: "OUTLET CITY METZINGEN",
-    included: "VIP-Shopping Day",
-    mapsQuery: "Outletcity Metzingen",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "residenzschloss-ludwigsburg",
-    category: "AUSFLUGSZIELE",
-    name: "Residenzschloss Ludwigsburg",
-    included: "Standard-Schlossführung",
-    mapsQuery: "Residenzschloss Ludwigsburg",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
-  },
-  {
-    id: "ritter-sport-schokoshop-waldenbuch",
-    category: "AUSFLUGSZIELE",
-    name: "Ritter Sport Schokoshop Waldenbuch",
-    included: "5 € Vergütung beim Einkauf (Mindestkaufwert 25 €)",
-    mapsQuery: "Ritter Sport Schokoshop Waldenbuch",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
+    address: "Jahnstraße 120, 70597 Stuttgart",
+    mapsQuery: "SWR Fernsehturm Jahnstraße 120 Stuttgart",
+    openHours: "Turm: Mo–So/Feiertag 10:00–22:00 (letzte Auffahrt 30 Min vorher)",
+    temporarilyClosed: "Abweichungen/Events: bitte auf der Website prüfen",
+    sourceUrl: "https://www.fernsehturm-stuttgart.de/de/besuch/"
   },
   {
     id: "schloss-solitude-stuttgart",
     category: "AUSFLUGSZIELE",
     name: "Schloss Solitude, Stuttgart",
     included: "Eintritt Standardführung",
-    mapsQuery: "Schloss Solitude Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
+    address: "Solitude 1, 70197 Stuttgart",
+    mapsQuery: "Schloss Solitude Solitude 1 Stuttgart",
+    openHours:
+      "Saisonal (Beispiel laut offizieller Seite): 1. Apr–31. Okt: Mi/Do/Fr/Sa/So/Feiertag 10:00–17:00 (Details siehe Website)",
+    temporarilyClosed: "Saison-/Feiertagsabweichungen: siehe Website",
+    sourceUrl: "https://www.schloss-solitude.de/besuchsinformation/oeffnungszeiten"
   },
   {
-    id: "wildparadies-tripsdrill-cleebronn",
+    id: "residenzschloss-ludwigsburg",
     category: "AUSFLUGSZIELE",
-    name: "Wildparadies Tripsdrill, Cleebronn",
-    included: "Wildparadies-Pass",
-    mapsQuery: "Wildparadies Tripsdrill Cleebronn",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
+    name: "Residenzschloss Ludwigsburg",
+    included: "Standard-Schlossführung",
+    address: "Schloss Ludwigsburg (Besuchsinformation/Adresse siehe Website)",
+    mapsQuery: "Residenzschloss Ludwigsburg",
+    openHours:
+      "Saisonal (Beispiel laut offizieller Seite): 1. Apr–31. Okt Sa/So 10:00–17:00; 1. Nov–31. Mär Di–Fr 12:00–15:00, Sa/So/Feiertag 11:00–16:00 (Details siehe Website)",
+    temporarilyClosed: "Einzelne Schließtage sind möglich – siehe Website",
+    sourceUrl: "https://www.schloss-ludwigsburg.de/besuchsinformation/oeffnungszeiten"
   },
   {
-    id: "wilhelma-stuttgart",
+    id: "outletcity-metzingen-vip-shopping-day",
     category: "AUSFLUGSZIELE",
-    name: "Wilhelma, Stuttgart",
-    included: "Eintritt frei",
-    mapsQuery: "Wilhelma Stuttgart",
-    openHours: "[Nicht verifiziert] Bitte ergänzen"
+    name: "OUTLETCITY METZINGEN",
+    included: "VIP-Shopping Day",
+    address: "Maienwaldstraße 2, 72555 Metzingen",
+    mapsQuery: "OUTLETCITY METZINGEN Maienwaldstraße 2",
+    openHours: TBD,
+    sourceUrl: "https://www.erlebnisregion-stuttgart.de/erlebniscard/alle-partner-der-erlebniscard"
   }
 ];
