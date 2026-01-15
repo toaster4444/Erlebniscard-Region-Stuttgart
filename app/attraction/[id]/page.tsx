@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ATTRACTIONS } from "@/data/attractions";
-import { googleMapsLinkFromQuery } from "@/lib/utils";
 
 export default async function AttractionDetailPage({
   params
@@ -28,7 +27,8 @@ export default async function AttractionDetailPage({
     );
   }
 
-  const mapsLink = a.mapsQuery ? googleMapsLinkFromQuery(a.mapsQuery) : null;
+  const mapsLink = a.mapsUrl ?? null;
+  const address = `${a.address.street}, ${a.address.zip} ${a.address.city}`;
 
   return (
     <main className="container">
@@ -53,17 +53,26 @@ export default async function AttractionDetailPage({
         <div className="kv">
           <div>
             <div className="label">Ort / Adresse</div>
-            <div className="value">{a.address ?? "[Nicht verifiziert] Bitte ergänzen"}</div>
+            <div className="value">{address}</div>
           </div>
 
           <div>
             <div className="label">Öffnungszeiten</div>
-            <div className="value">{a.openHours ?? "[Nicht verifiziert] Bitte ergänzen"}</div>
+            <div className="value">
+              {a.openingHours.map((rule, idx) => (
+                <div key={`${rule.days.join("-")}-${idx}`}>
+                  <strong>{rule.days.join(", ")}:</strong> {rule.from}–{rule.to}
+                  {rule.note ? ` (${rule.note})` : ""}
+                </div>
+              ))}
+            </div>
           </div>
 
           <div>
             <div className="label">Temporär geschlossen?</div>
-            <div className="value">{a.temporarilyClosed ?? "[Nicht verifiziert] Unbekannt / bitte ergänzen"}</div>
+            <div className="value">
+              {a.closureNote ?? a.seasonNote ?? "Keine Angabe"}
+            </div>
           </div>
         </div>
       </div>

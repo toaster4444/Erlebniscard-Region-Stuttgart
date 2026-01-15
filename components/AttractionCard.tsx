@@ -13,9 +13,9 @@ export function AttractionCard(props: {
   return (
     <div className={`card ${props.visited ? "visited" : ""}`}>
       <div className="thumb" aria-hidden="true">
-        {a.imageUrl ? (
+        {a.image?.thumbUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={a.imageUrl} alt="" />
+          <img src={a.image.thumbUrl} alt="" />
         ) : (
           <span>Bild</span>
         )}
