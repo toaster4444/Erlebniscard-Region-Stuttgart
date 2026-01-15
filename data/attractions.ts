@@ -615,4 +615,248 @@ export const ATTRACTIONS: Attraction[] = [
   ],
   image: { thumbUrl: "/images/placeholder/aktiv/sprungbude.jpg" },
 },
+// =========================================================
+// MUSEEN & KULTUR
+// =========================================================
+
+{
+  id: "museum-carl-schweizer-murrhardt",
+  category: "MUSEUM_KULTUR",
+  name: "Carl-Schweizer-Museum",
+  shortTitle: "Carl-Schweizer-Museum",
+  included: "Freier Eintritt inkl. Führung",
+  description:
+    "Regionalmuseum zur Stadt- und Kulturgeschichte von Murrhardt mit wechselnden Sonderausstellungen.",
+  address: {
+    street: "Marktstraße 48",
+    zip: "71540",
+    city: "Murrhardt",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Marktstra%C3%9Fe+48%2C+71540+Murrhardt",
+  openingHours: [
+    {
+      days: ["Mi", "Do", "Fr", "Sa", "So"],
+      from: "14:00",
+      to: "17:00",
+      note: "Führungen nach Vereinbarung",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/museum/carl-schweizer.jpg" },
+},
+
+{
+  id: "museum-deutsches-landwirtschaftsmuseum",
+  category: "MUSEUM_KULTUR",
+  name: "Deutsches Landwirtschaftsmuseum Stuttgart",
+  shortTitle: "Landwirtschaftsmuseum",
+  included: "Tageskarte",
+  description:
+    "Technik- und Kulturgeschichte der Landwirtschaft mit historischen Maschinen und Geräten.",
+  address: {
+    street: "Hohenheim",
+    zip: "70599",
+    city: "Stuttgart",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Deutsches+Landwirtschaftsmuseum+Hohenheim+Stuttgart",
+  openingHours: [
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "10:00",
+      to: "17:00",
+    },
+  ],
+  seasonNote: "Außerhalb der Wochenenden nur nach Anmeldung.",
+  image: { thumbUrl: "/images/placeholder/museum/landwirtschaft.jpg" },
+},
+
+{
+  id: "museum-faszination-psyche",
+  category: "MUSEUM_KULTUR",
+  name: "Faszination Psyche",
+  shortTitle: "Faszination Psyche",
+  included: "Eintritt frei",
+  description:
+    "Erlebnisausstellung zur Funktionsweise der menschlichen Psyche – interaktiv und multimedial.",
+  address: {
+    street: "Breitscheidstraße 20",
+    zip: "70176",
+    city: "Stuttgart",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Breitscheidstra%C3%9Fe+20%2C+70176+Stuttgart",
+  openingHours: [
+    {
+      days: ["Mo", "Di", "Mi", "Do", "Fr"],
+      from: "09:00",
+      to: "18:00",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/museum/psyche.jpg" },
+},
+
+{
+  id: "museum-freilichtmuseum-beuren",
+  category: "MUSEUM_KULTUR",
+  name: "Freilichtmuseum Beuren",
+  shortTitle: "Freilichtmuseum Beuren",
+  included: "Tageskarte",
+  description:
+    "Historische Gebäude und Alltagskultur aus dem ländlichen Württemberg.",
+  address: {
+    street: "Museumstraße 1",
+    zip: "72660",
+    city: "Beuren",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Museumstra%C3%9Fe+1%2C+72660+Beuren",
+  openingHours: [
+    {
+      days: ["Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+      from: "10:00",
+      to: "18:00",
+    },
+  ],
+  seasonNote: "Saisonbetrieb April–Oktober.",
+  image: { thumbUrl: "/images/placeholder/museum/beuren.jpg" },
+},
+
+{
+  id: "museum-galerie-stihl-waiblingen",
+  category: "MUSEUM_KULTUR",
+  name: "Galerie Stihl Waiblingen",
+  shortTitle: "Galerie Stihl",
+  included: "Eintritt frei",
+  description:
+    "Hochwertige Ausstellungen moderner und zeitgenössischer Kunst.",
+  address: {
+    street: "Weingärtner Vorstadt 12",
+    zip: "71332",
+    city: "Waiblingen",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Weing%C3%A4rtner+Vorstadt+12%2C+71332+Waiblingen",
+  openingHours: [
+    {
+      days: ["Di", "Mi", "Do", "Fr"],
+      from: "11:00",
+      to: "18:00",
+    },
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "10:00",
+      to: "18:00",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/museum/stihl.jpg" },
+},
+
+{
+  id: "museum-mercedes-benz",
+  category: "MUSEUM_KULTUR",
+  name: "Mercedes-Benz Museum",
+  shortTitle: "Mercedes-Benz Museum",
+  included: "Eintritt frei",
+  description:
+    "Automobilgeschichte von den Anfängen bis zur Gegenwart auf 9 Ebenen.",
+  address: {
+    street: "Mercedesstraße 100",
+    zip: "70372",
+    city: "Stuttgart",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Mercedesstra%C3%9Fe+100%2C+70372+Stuttgart",
+  openingHours: [
+    {
+      days: ["Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+      from: "09:00",
+      to: "18:00",
+    },
+  ],
+  closureNote: "Montags geschlossen (außer Feiertag).",
+  image: { thumbUrl: "/images/placeholder/museum/mercedes.jpg" },
+},
+
+{
+  id: "museum-porsche",
+  category: "MUSEUM_KULTUR",
+  name: "Porsche Museum",
+  shortTitle: "Porsche Museum",
+  included: "Eintritt frei",
+  description:
+    "Markengeschichte, Rennsport und Design von Porsche in moderner Architektur.",
+  address: {
+    street: "Porscheplatz 1",
+    zip: "70435",
+    city: "Stuttgart",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Porscheplatz+1%2C+70435+Stuttgart",
+  openingHours: [
+    {
+      days: ["Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+      from: "09:00",
+      to: "18:00",
+    },
+  ],
+  closureNote: "Montags geschlossen.",
+  image: { thumbUrl: "/images/placeholder/museum/porsche.jpg" },
+},
+
+{
+  id: "museum-wilhelma-museum",
+  category: "MUSEUM_KULTUR",
+  name: "Museum am Löwentor (Naturkundemuseum)",
+  shortTitle: "Museum am Löwentor",
+  included: "Kombiticket mit Schloss Rosenstein",
+  description:
+    "Naturkundemuseum mit Fokus auf Evolution, Fossilien und Biodiversität.",
+  address: {
+    street: "Rosenstein 1",
+    zip: "70191",
+    city: "Stuttgart",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Rosenstein+1%2C+70191+Stuttgart",
+  openingHours: [
+    {
+      days: ["Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+      from: "09:00",
+      to: "17:00",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/museum/loewentor.jpg" },
+},
+
+{
+  id: "museum-staatsgalerie",
+  category: "MUSEUM_KULTUR",
+  name: "Staatsgalerie Stuttgart",
+  shortTitle: "Staatsgalerie",
+  included: "Tageskarte",
+  description:
+    "Internationale Kunst von der Klassischen Moderne bis zur Gegenwart.",
+  address: {
+    street: "Konrad-Adenauer-Straße 30–32",
+    zip: "70173",
+    city: "Stuttgart",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Konrad-Adenauer-Stra%C3%9Fe+30%2C+70173+Stuttgart",
+  openingHours: [
+    {
+      days: ["Di", "Mi", "Do", "Fr"],
+      from: "10:00",
+      to: "17:00",
+    },
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "10:00",
+      to: "18:00",
+    },
+  ],
+  closureNote: "Montags geschlossen.",
+  image: { thumbUrl: "/images/placeholder/museum/staatsgalerie.jpg" },
+},
 
