@@ -859,4 +859,332 @@ export const ATTRACTIONS: Attraction[] = [
   closureNote: "Montags geschlossen.",
   image: { thumbUrl: "/images/placeholder/museum/staatsgalerie.jpg" },
 },
+// =========================================================
+// STADTERLEBNIS
+// =========================================================
+
+{
+  id: "stadterlebnis-altstadtrundgang-esslingen",
+  category: "STADTERLEBNIS",
+  name: "Altstadtrundgang Esslingen am Neckar",
+  shortTitle: "Altstadtrundgang Esslingen",
+  included: "Ticket für eine Stadtführung",
+  description:
+    "Geführter Rundgang durch die mittelalterliche Altstadt von Esslingen mit Fachwerkhäusern und historischen Plätzen.",
+  address: {
+    street: "Marktplatz",
+    zip: "73728",
+    city: "Esslingen am Neckar",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Marktplatz+73728+Esslingen+am+Neckar",
+  openingHours: [
+    {
+      days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Stadtführungen finden zu festen Terminen statt. Termine bitte vorab online prüfen.",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/stadt/esslingen.jpg" },
+},
+
+{
+  id: "stadterlebnis-citytour-stuttgart",
+  category: "STADTERLEBNIS",
+  name: "Citytour Stuttgart – Blaue Tour",
+  shortTitle: "Citytour Stuttgart",
+  included: "Tagesticket Blaue Tour",
+  description:
+    "Hop-on-Hop-off-Bustour durch Stuttgart mit audiogeführten Informationen zu Sehenswürdigkeiten.",
+  address: {
+    street: "Königstraße (Einstieg)",
+    zip: "70173",
+    city: "Stuttgart",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=K%C3%B6nigstra%C3%9Fe+70173+Stuttgart",
+  openingHours: [
+    {
+      days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Fahrzeiten und Abfahrtsintervalle sind saisonabhängig – bitte Fahrplan prüfen.",
+    },
+  ],
+  seasonNote: "Ganzjährig, eingeschränkter Betrieb im Winter möglich.",
+  image: { thumbUrl: "/images/placeholder/stadt/citytour.jpg" },
+},
+
+{
+  id: "stadterlebnis-historische-stadtfuehrung-goeppingen",
+  category: "STADTERLEBNIS",
+  name: "Historische Stadtführung Göppingen",
+  shortTitle: "Stadtführung Göppingen",
+  included: "Ticket für eine Stadtführung",
+  description:
+    "Historischer Rundgang durch Göppingen mit Einblicken in Stadtgeschichte und Architektur.",
+  address: {
+    street: "Rathaus Göppingen",
+    zip: "73033",
+    city: "Göppingen",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Rathaus+G%C3%B6ppingen+73033",
+  openingHours: [
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Führungen an ausgewählten Terminen – vorherige Anmeldung empfohlen.",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/stadt/goeppingen.jpg" },
+},
+
+{
+  id: "stadterlebnis-historische-stadtfuehrung-kirchheim",
+  category: "STADTERLEBNIS",
+  name: "Historische Stadtführung Kirchheim unter Teck",
+  shortTitle: "Stadtführung Kirchheim",
+  included: "Ticket für eine Stadtführung",
+  description:
+    "Rundgang durch die historische Altstadt von Kirchheim unter Teck.",
+  address: {
+    street: "Max-Eyth-Straße 15 (Kirchheim-Info)",
+    zip: "73230",
+    city: "Kirchheim unter Teck",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Max-Eyth-Stra%C3%9Fe+15%2C+73230+Kirchheim+unter+Teck",
+  openingHours: [
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Stadtführungen finden zu festen Terminen statt – bitte Tourismus-Info prüfen.",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/stadt/kirchheim.jpg" },
+},
+
+{
+  id: "stadterlebnis-historische-stadtfuehrung-schwaebisch-gmuend",
+  category: "STADTERLEBNIS",
+  name: "Historische Stadtführung Schwäbisch Gmünd",
+  shortTitle: "Stadtführung Schwäbisch Gmünd",
+  included: "Ticket für eine Stadtführung",
+  description:
+    "Entdeckungstour durch eine der ältesten Stauferstädte mit reicher Geschichte.",
+  address: {
+    street: "Marktplatz",
+    zip: "73525",
+    city: "Schwäbisch Gmünd",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Marktplatz+73525+Schw%C3%A4bisch+Gm%C3%BCnd",
+  openingHours: [
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Regelmäßige öffentliche Führungen, Termine variieren saisonal.",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/stadt/gmuend.jpg" },
+},
+
+{
+  id: "stadterlebnis-offene-stadtfuehrung-schorndorf",
+  category: "STADTERLEBNIS",
+  name: "Offene Stadtführung Schorndorf",
+  shortTitle: "Stadtführung Schorndorf",
+  included: "Ticket für eine Stadtführung",
+  description:
+    "Geführter Rundgang durch die Daimlerstadt Schorndorf.",
+  address: {
+    street: "Marktplatz",
+    zip: "73614",
+    city: "Schorndorf",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Marktplatz+73614+Schorndorf",
+  openingHours: [
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Offene Führungen an ausgewählten Terminen.",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/stadt/schorndorf.jpg" },
+},
+
+{
+  id: "stadterlebnis-historische-stadtfuehrung-nuertingen",
+  category: "STADTERLEBNIS",
+  name: "Öffentliche historische Stadtführung Nürtingen",
+  shortTitle: "Stadtführung Nürtingen",
+  included: "Ticket für eine Stadtführung",
+  description:
+    "Historische Stadtführung durch Nürtingen mit Fokus auf Altstadt und Neckar.",
+  address: {
+    street: "Schillerplatz",
+    zip: "72622",
+    city: "Nürtingen",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Schillerplatz+72622+N%C3%BCrtingen",
+  openingHours: [
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Führungen finden regelmäßig, aber nicht täglich statt.",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/stadt/nuertingen.jpg" },
+},
+
+{
+  id: "stadterlebnis-historische-stadtfuehrung-bad-wildbad",
+  category: "STADTERLEBNIS",
+  name: "Öffentliche historische Stadtführung Bad Wildbad",
+  shortTitle: "Stadtführung Bad Wildbad",
+  included: "Ticket für eine Stadtführung",
+  description:
+    "Historischer Rundgang durch den Kurort Bad Wildbad im Schwarzwald.",
+  address: {
+    street: "Kurplatz",
+    zip: "75323",
+    city: "Bad Wildbad",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Kurplatz+75323+Bad+Wildbad",
+  openingHours: [
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Öffentliche Führungen an ausgewählten Terminen.",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/stadt/badwildbad.jpg" },
+},
+
+{
+  id: "stadterlebnis-stadtfuehrung-ludwigsburg",
+  category: "STADTERLEBNIS",
+  name: "Stadtführung Ludwigsburg – „Ludwigsburg auf einen Blick“",
+  shortTitle: "Stadtführung Ludwigsburg",
+  included: "Ticket für eine Stadtführung",
+  description:
+    "Kompakte Einführung in die Geschichte der Barockstadt Ludwigsburg.",
+  address: {
+    street: "Marktplatz",
+    zip: "71634",
+    city: "Ludwigsburg",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Marktplatz+71634+Ludwigsburg",
+  openingHours: [
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Regelmäßige Wochenend-Termine; Anmeldung empfohlen.",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/stadt/ludwigsburg.jpg" },
+},
+
+{
+  id: "stadterlebnis-stadtfuehrung-murrhardt",
+  category: "STADTERLEBNIS",
+  name: "Stadtführung Murrhardt",
+  shortTitle: "Stadtführung Murrhardt",
+  included: "Ticket für eine Stadtführung",
+  description:
+    "Historischer Rundgang durch die Klosterstadt Murrhardt.",
+  address: {
+    street: "Marktplatz",
+    zip: "71540",
+    city: "Murrhardt",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Marktplatz+71540+Murrhardt",
+  openingHours: [
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Termine variieren – bitte Tourismus-Info prüfen.",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/stadt/murrhardt.jpg" },
+},
+
+{
+  id: "stadterlebnis-stadtfuehrung-plochingen-hundertwasser",
+  category: "STADTERLEBNIS",
+  name: "Stadtführung Plochingen – Hundertwasser",
+  shortTitle: "Stadtführung Plochingen",
+  included: "Ticket für eine Stadtführung",
+  description:
+    "Führung rund um das Hundertwasserhaus und die Altstadt von Plochingen.",
+  address: {
+    street: "Marktplatz",
+    zip: "73207",
+    city: "Plochingen",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Marktplatz+73207+Plochingen",
+  openingHours: [
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Öffentliche Führungen an ausgewählten Terminen.",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/stadt/plochingen.jpg" },
+},
+
+{
+  id: "stadterlebnis-stadtfuehrung-sindelfingen",
+  category: "STADTERLEBNIS",
+  name: "Stadtführung Sindelfingen",
+  shortTitle: "Stadtführung Sindelfingen",
+  included: "Ticket für eine Stadtführung",
+  description:
+    "Stadtführung durch die historische Altstadt und das Fachwerkviertel.",
+  address: {
+    street: "Marktplatz",
+    zip: "71063",
+    city: "Sindelfingen",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Marktplatz+71063+Sindelfingen",
+  openingHours: [
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Führungen nur an festen Terminen – bitte vorher prüfen.",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/stadt/sindelfingen.jpg" },
+},
 
