@@ -1187,4 +1187,307 @@ export const ATTRACTIONS: Attraction[] = [
   ],
   image: { thumbUrl: "/images/placeholder/stadt/sindelfingen.jpg" },
 },
+// =========================================================
+// AUSFLUGSZIELE
+// =========================================================
+
+{
+  id: "ausflug-swr-fernsehturm",
+  category: "AUSFLUGSZIELE",
+  name: "SWR Fernsehturm Stuttgart",
+  shortTitle: "Fernsehturm Stuttgart",
+  included: "Tageskarte",
+  description:
+    "Erster Fernsehturm der Welt aus Stahlbeton mit Aussichtsplattform und Café.",
+  address: {
+    street: "Jahnstraße 120",
+    zip: "70597",
+    city: "Stuttgart",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Jahnstra%C3%9Fe+120%2C+70597+Stuttgart",
+  openingHours: [
+    { days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"], from: "10:00", to: "22:00" },
+  ],
+  closureNote:
+    "Letzte Auffahrt 30 Minuten vor Schließung. Wetter- oder veranstaltungsbedingte Einschränkungen möglich.",
+  image: { thumbUrl: "/images/placeholder/ausflug/fernsehturm.jpg" },
+},
+
+{
+  id: "ausflug-fellbacher-weingaertner",
+  category: "AUSFLUGSZIELE",
+  name: "Fellbacher Weingärtner eG",
+  shortTitle: "Fellbacher Weingärtner",
+  included: "Teilnahme Kellerblicke",
+  description:
+    "Einblick in den Weinkeller der Fellbacher Weingärtner mit Führung.",
+  address: {
+    street: "Kappelbergstraße 48",
+    zip: "70734",
+    city: "Fellbach",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Kappelbergstra%C3%9Fe+48%2C+70734+Fellbach",
+  openingHours: [
+    {
+      days: ["—"],
+      from: "—",
+      to: "—",
+      note: "Kellerblicke nur zu festgelegten Terminen – Anmeldung erforderlich.",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/ausflug/weingaertner.jpg" },
+},
+
+{
+  id: "ausflug-forscherfabrik-schorndorf",
+  category: "AUSFLUGSZIELE",
+  name: "Forscherfabrik Schorndorf",
+  shortTitle: "Forscherfabrik",
+  included: "3-Stunden-Ticket Erwachsene",
+  description:
+    "Mitmach-Ausstellungen zu Technik und Naturwissenschaften – ideal für Familien.",
+  address: {
+    street: "Hammerschlag 8",
+    zip: "73614",
+    city: "Schorndorf",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Hammerschlag+8%2C+73614+Schorndorf",
+  openingHours: [
+    {
+      days: ["Mi", "Do", "Fr"],
+      from: "14:00",
+      to: "18:00",
+    },
+    {
+      days: ["Sa", "So", "Feiertag"],
+      from: "10:00",
+      to: "18:00",
+    },
+  ],
+  closureNote: "Montag und Dienstag geschlossen.",
+  image: { thumbUrl: "/images/placeholder/ausflug/forscherfabrik.jpg" },
+},
+
+{
+  id: "ausflug-grabkapelle-wuerttemberg",
+  category: "AUSFLUGSZIELE",
+  name: "Grabkapelle auf dem Württemberg",
+  shortTitle: "Grabkapelle Württemberg",
+  included: "Eintritt frei",
+  description:
+    "Klassizistisches Mausoleum mit Blick über das Neckartal.",
+  address: {
+    street: "Württembergstraße 340",
+    zip: "70327",
+    city: "Stuttgart",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=W%C3%BCrttembergstra%C3%9Fe+340%2C+70327+Stuttgart",
+  openingHours: [
+    {
+      days: ["Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+      from: "10:00",
+      to: "17:00",
+    },
+  ],
+  seasonNote: "Saisonbetrieb (April–Oktober).",
+  closureNote: "Montag und Dienstag geschlossen.",
+  image: { thumbUrl: "/images/placeholder/ausflug/grabkapelle.jpg" },
+},
+
+{
+  id: "ausflug-mercedes-benz-kundencenter-sindelfingen",
+  category: "AUSFLUGSZIELE",
+  name: "Mercedes-Benz Kundencenter Sindelfingen",
+  shortTitle: "MB Kundencenter",
+  included: "Werkbesichtigung Kompakt Plus oder Intensiv",
+  description:
+    "Geführte Werksbesichtigung durch eines der größten Automobilwerke weltweit.",
+  address: {
+    street: "Käsbrünnlestraße 20",
+    zip: "71063",
+    city: "Sindelfingen",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=K%C3%A4sbr%C3%BCnnlestra%C3%9Fe+20%2C+71063+Sindelfingen",
+  openingHours: [
+    {
+      days: ["Mo", "Di", "Mi", "Do", "Fr"],
+      from: "—",
+      to: "—",
+      note:
+        "Werksführungen nur mit vorheriger Buchung zu festen Zeitfenstern.",
+    },
+  ],
+  closureNote:
+    "Keine Führungen an Wochenenden, Feiertagen sowie während Werksferien.",
+  image: { thumbUrl: "/images/placeholder/ausflug/mb-werk.jpg" },
+},
+
+{
+  id: "ausflug-outletcity-metzingen",
+  category: "AUSFLUGSZIELE",
+  name: "OUTLETCITY METZINGEN",
+  shortTitle: "Outletcity Metzingen",
+  included: "VIP-Shopping Day",
+  description:
+    "International bekanntes Outlet mit über 100 Marken.",
+  address: {
+    street: "Maienwaldstraße 2",
+    zip: "72555",
+    city: "Metzingen",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Maienwaldstra%C3%9Fe+2%2C+72555+Metzingen",
+  openingHours: [
+    {
+      days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa"],
+      from: "10:00",
+      to: "20:00",
+    },
+    {
+      days: ["So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note: "Sonderöffnungen an verkaufsoffenen Sonntagen.",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/ausflug/outletcity.jpg" },
+},
+
+{
+  id: "ausflug-residenzschloss-ludwigsburg",
+  category: "AUSFLUGSZIELE",
+  name: "Residenzschloss Ludwigsburg",
+  shortTitle: "Residenzschloss",
+  included: "Standard-Schlossführung",
+  description:
+    "Eines der größten erhaltenen Barockschlösser Europas.",
+  address: {
+    street: "Schlossstraße 30",
+    zip: "71634",
+    city: "Ludwigsburg",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Schlossstra%C3%9Fe+30%2C+71634+Ludwigsburg",
+  openingHours: [
+    {
+      days: ["—"],
+      from: "—",
+      to: "—",
+      note:
+        "Schlossführungen zu festen Zeiten; Zeiten variieren saisonal – bitte prüfen.",
+    },
+  ],
+  seasonNote: "Ganzjährig, saisonabhängige Führungszeiten.",
+  image: { thumbUrl: "/images/placeholder/ausflug/ludwigsburg.jpg" },
+},
+
+{
+  id: "ausflug-ritter-sport-waldenbuch",
+  category: "AUSFLUGSZIELE",
+  name: "Ritter Sport Schokoshop Waldenbuch",
+  shortTitle: "Ritter Sport",
+  included: "5 € Vergütung beim Einkauf (Mindestkaufwert 25 €)",
+  description:
+    "Markenshop mit Schokoladenvielfalt und Erlebnisbereich.",
+  address: {
+    street: "Alfred-Ritter-Straße 27",
+    zip: "71111",
+    city: "Waldenbuch",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Alfred-Ritter-Stra%C3%9Fe+27%2C+71111+Waldenbuch",
+  openingHours: [
+    { days: ["Mo", "Di", "Mi", "Do", "Fr"], from: "10:00", to: "18:00" },
+    { days: ["Sa"], from: "10:00", to: "17:00" },
+  ],
+  closureNote: "Sonntag geschlossen.",
+  image: { thumbUrl: "/images/placeholder/ausflug/ritter.jpg" },
+},
+
+{
+  id: "ausflug-schloss-solitude",
+  category: "AUSFLUGSZIELE",
+  name: "Schloss Solitude",
+  shortTitle: "Schloss Solitude",
+  included: "Eintritt Standardführung",
+  description:
+    "Rokokoschloss mit Panorama-Ausblick westlich von Stuttgart.",
+  address: {
+    street: "Solitude 1",
+    zip: "70197",
+    city: "Stuttgart",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Solitude+1%2C+70197+Stuttgart",
+  openingHours: [
+    {
+      days: ["Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+      from: "10:00",
+      to: "17:00",
+    },
+  ],
+  seasonNote: "Saisonbetrieb April–Oktober.",
+  closureNote: "Montag und Dienstag geschlossen.",
+  image: { thumbUrl: "/images/placeholder/ausflug/solitude.jpg" },
+},
+
+{
+  id: "ausflug-wildparadies-tripsdrill",
+  category: "AUSFLUGSZIELE",
+  name: "Wildparadies Tripsdrill",
+  shortTitle: "Wildparadies Tripsdrill",
+  included: "Wildparadies-Pass",
+  description:
+    "Tierpark mit heimischen Wildtieren, Greifvogelshows und Naturerlebnis.",
+  address: {
+    street: "Treffentrill",
+    zip: "74389",
+    city: "Cleebronn",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Treffentrill%2C+74389+Cleebronn",
+  openingHours: [
+    {
+      days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+      from: "—",
+      to: "—",
+      note:
+        "Ganzjährig geöffnet, Öffnungszeiten variieren saisonal – bitte Website prüfen.",
+    },
+  ],
+  image: { thumbUrl: "/images/placeholder/ausflug/tripsdrill.jpg" },
+},
+
+{
+  id: "ausflug-wilhelma",
+  category: "AUSFLUGSZIELE",
+  name: "Wilhelma Stuttgart",
+  shortTitle: "Wilhelma",
+  included: "Eintritt frei",
+  description:
+    "Zoologisch-botanischer Garten mit historischer Architektur.",
+  address: {
+    street: "Wilhelma 13",
+    zip: "70376",
+    city: "Stuttgart",
+  },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Wilhelma+13%2C+70376+Stuttgart",
+  openingHours: [
+    {
+      days: ["—"],
+      from: "—",
+      to: "—",
+      note:
+        "Öffnungszeiten variieren stark je nach Jahreszeit – bitte tagesaktuell prüfen.",
+    },
+  ],
+  seasonNote: "Ganzjährig geöffnet.",
+  image: { thumbUrl: "/images/placeholder/ausflug/wilhelma.jpg" },
+},
 
