@@ -195,6 +195,35 @@ export const ATTRACTIONS: Attraction[] = [
   },
 
   {
+    id: "wasserspass-freibad-kirchheim",
+    category: "WASSERSPASS",
+    name: "Freibad Kirchheim unter Teck",
+    shortTitle: "Freibad Kirchheim",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Freibad in Kirchheim unter Teck mit ErlebnisCard-Eintritt.",
+    address: {
+      street: "Jesinger Straße 79",
+      zip: "73230",
+      city: "Kirchheim unter Teck",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Jesinger+Stra%C3%9Fe+79%2C+73230+Kirchheim+unter+Teck",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-freibad-kirchheim-unter-teck",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten sind saison- und wetterabhängig (bitte vorab prüfen).",
+      },
+    ],
+    seasonNote: "Saisonbetrieb (typisch Frühjahr/Sommer).",
+    image: { thumbUrl: "/images/placeholder/wasserspass/freibad-kirchheim.jpg" },
+  },
+
+  {
     id: "wasserspass-mineralbad-berg",
     category: "WASSERSPASS",
     name: "Mineralbad Berg (Stuttgart)",
@@ -1052,6 +1081,625 @@ export const ATTRACTIONS: Attraction[] = [
     closureNote: "Montags geschlossen.",
     image: { thumbUrl: "/images/placeholder/museum/staatsgalerie.jpg" },
   },
+
+  {
+    id: "museum-schillers-geburtshaus",
+    category: "MUSEUM_KULTUR",
+    name: "Schillers Geburtshaus in Marbach am Neckar",
+    shortTitle: "Schillers Geburtshaus",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Literaturmuseum in Marbach am Neckar, Geburtshaus von Friedrich Schiller.",
+    address: {
+      street: "Niklastorstraße 31",
+      zip: "71672",
+      city: "Marbach am Neckar",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Niklastorstra%C3%9Fe%2031%2C%2071672%20Marbach%20am%20Neckar",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-schillers-geburtshaus",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/schillers-geburtshaus.jpg" },
+  },
+
+  {
+    id: "museum-stadtpalais",
+    category: "MUSEUM_KULTUR",
+    name: "StadtPalais – Museum für Stuttgart",
+    shortTitle: "StadtPalais",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Museum zur Stadtgeschichte Stuttgarts im StadtPalais.",
+    address: {
+      street: "Konrad-Adenauer-Str. 2",
+      zip: "70173",
+      city: "Stuttgart",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Konrad-Adenauer-Str.%202%2C%2070173%20Stuttgart",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-stadtpalais-stuttgart",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/stadtpalais.jpg" },
+  },
+
+  {
+    id: "museum-landesmuseum-wuerttemberg",
+    category: "MUSEUM_KULTUR",
+    name: "Landesmuseum Württemberg in Stuttgart",
+    shortTitle: "Landesmuseum Württemberg",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Sammlungen zur Geschichte und Kultur Württembergs im Alten Schloss.",
+    address: {
+      street: "Schillerplatz 6",
+      zip: "70173",
+      city: "Stuttgart",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Schillerplatz%206%2C%2070173%20Stuttgart",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-landesmuseum-wuerttemberg",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/landesmuseum.jpg" },
+  },
+
+  {
+    id: "museum-weissenhofmuseum",
+    category: "MUSEUM_KULTUR",
+    name: "UNESCO-Welterbe in der Weissenhofsiedlung",
+    shortTitle: "Weissenhofmuseum",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Weissenhofmuseum im Haus Le Corbusier, Teil des UNESCO-Welterbes.",
+    address: {
+      street: "Rathenaustraße 1-3",
+      zip: "70191",
+      city: "Stuttgart",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Rathenaustra%C3%9Fe%201-3%2C%2070191%20Stuttgart",
+    regionDetailUrl:
+      "https://www.erlebnisregion-stuttgart.de/a-weissenhofsiedlung-stuttgart-weissenhof-museum-im-haus-le-corbusier",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/weissenhof.jpg" },
+  },
+
+  {
+    id: "museum-alltagskultur-waldenbuch",
+    category: "MUSEUM_KULTUR",
+    name: "Museum der Alltagskultur - Schloss Waldenbuch",
+    shortTitle: "Museum Alltagskultur",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Alltagskultur und Geschichte Württembergs im Schloss Waldenbuch.",
+    address: {
+      street: "Kirchgasse 3",
+      zip: "71111",
+      city: "Waldenbuch",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Kirchgasse%203%2C%2071111%20Waldenbuch",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-museum-der-alltagskultur-schloss-waldenbuch",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/alltagskultur.jpg" },
+  },
+
+  {
+    id: "museum-haus-der-geschichte",
+    category: "MUSEUM_KULTUR",
+    name: "Haus der Geschichte Baden-Württemberg in Stuttgart",
+    shortTitle: "Haus der Geschichte",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Zeitgeschichte Baden-Württembergs in wechselnden Ausstellungen.",
+    address: {
+      street: "Konrad-Adenauer-Straße 16",
+      zip: "70173",
+      city: "Stuttgart",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Konrad-Adenauer-Stra%C3%9Fe%2016%2C%2070173%20Stuttgart",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-haus-der-geschichte",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/haus-der-geschichte.jpg" },
+  },
+
+  {
+    id: "museum-kunstmuseum-stuttgart",
+    category: "MUSEUM_KULTUR",
+    name: "Kunstmuseum Stuttgart",
+    shortTitle: "Kunstmuseum Stuttgart",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Moderne und zeitgenössische Kunst im Glaskubus am Schlossplatz.",
+    address: {
+      street: "Kleiner Schlossplatz 1",
+      zip: "70173",
+      city: "Stuttgart",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Kleiner%20Schlossplatz%201%2C%2070173%20Stuttgart",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-kunstmuseum-stuttgart",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/kunstmuseum.jpg" },
+  },
+
+  {
+    id: "museum-stihl-markenwelt",
+    category: "MUSEUM_KULTUR",
+    name: "STIHL Markenwelt",
+    shortTitle: "STIHL Markenwelt",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Marken- und Produktgeschichte von STIHL in Waiblingen.",
+    address: {
+      street: "Badstraße 115",
+      zip: "71336",
+      city: "Waiblingen",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Badstra%C3%9Fe%20115%2C%2071336%20Waiblingen",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-stihl-markenwelt",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/stihl-markenwelt.jpg" },
+  },
+
+  {
+    id: "museum-fritz-genkinger-kunsthaus",
+    category: "MUSEUM_KULTUR",
+    name: "Fritz Genkinger Kunsthaus Marbach am Neckar",
+    shortTitle: "Kunsthaus Genkinger",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Ausstellungen moderner Kunst im Fritz Genkinger Kunsthaus.",
+    address: {
+      street: "Göckelhof 6",
+      zip: "71672",
+      city: "Marbach am Neckar",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=G%C3%B6ckelhof%206%2C%2071672%20Marbach%20am%20Neckar",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-fritz-genkinger-kunsthaus-marbach-am-neckar",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/genkinger.jpg" },
+  },
+
+  {
+    id: "museum-kleihues-bau",
+    category: "MUSEUM_KULTUR",
+    name: "Museum im Kleihues-Bau",
+    shortTitle: "Museum im Kleihues-Bau",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Ausstellungen und Sammlung im Museum im Kleihues-Bau.",
+    address: {
+      street: "Stuttgarter Straße 93",
+      zip: "70806",
+      city: "Kornwestheim",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Stuttgarter%20Stra%C3%9Fe%2093%2C%2070806%20Kornwestheim",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-museum-im-kleihues-bau",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/kleihues.jpg" },
+  },
+
+  {
+    id: "museum-hoelzel-haus",
+    category: "MUSEUM_KULTUR",
+    name: "Hölzel-Haus",
+    shortTitle: "Hölzel-Haus",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Künstlerhaus und Museum zu Adolf Hölzel in Stuttgart-Degerloch.",
+    address: {
+      street: "Ahornstraße 22",
+      zip: "70597",
+      city: "Stuttgart",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Ahornstra%C3%9Fe%2022%2C%2070597%20Stuttgart",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-hoelzel-haus",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/hoelzel.jpg" },
+  },
+
+  {
+    id: "museum-miniaturwelten",
+    category: "MUSEUM_KULTUR",
+    name: "Miniaturwelten Stuttgart",
+    shortTitle: "Miniaturwelten",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Miniatur- und Modellwelten im Stuttgarter Hauptbahnhof.",
+    address: {
+      street: "Arnulf-Klett-Platz 1-3",
+      zip: "70173",
+      city: "Stuttgart",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Arnulf-Klett-Platz%201-3%2C%2070173%20Stuttgart",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-miniaturwelten-stuttgart",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/miniaturwelten.jpg" },
+  },
+
+  {
+    id: "museum-junges-schloss",
+    category: "MUSEUM_KULTUR",
+    name: "Kindermuseum Junges Schloss",
+    shortTitle: "Junges Schloss",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Interaktives Kindermuseum im Alten Schloss Stuttgart.",
+    address: {
+      street: "Schillerplatz 6",
+      zip: "70173",
+      city: "Stuttgart",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Schillerplatz%206%2C%2070173%20Stuttgart",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-junges-schloss-das-kindermuseum-in-stuttgart",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/junges-schloss.jpg" },
+  },
+
+  {
+    id: "museum-weinbaumuseum-stuttgart",
+    category: "MUSEUM_KULTUR",
+    name: "Weinbaumuseum Stuttgart",
+    shortTitle: "Weinbaumuseum",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Museum zur Weinbaugeschichte im Stuttgarter Stadtteil Uhlbach.",
+    address: {
+      street: "Uhlbacher Platz 4",
+      zip: "70329",
+      city: "Stuttgart",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Uhlbacher%20Platz%204%2C%2070329%20Stuttgart",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-weinbaumuseum-stuttgart",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/weinbaumuseum.jpg" },
+  },
+
+  {
+    id: "museum-schauwerk-sindelfingen",
+    category: "MUSEUM_KULTUR",
+    name: "Schauwerk Sindelfingen",
+    shortTitle: "Schauwerk",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Privatsammlung moderner Kunst im Schauwerk Sindelfingen.",
+    address: {
+      street: "Eschenbrünnlestraße 15",
+      zip: "71065",
+      city: "Sindelfingen",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Eschenbr%C3%BCnnlestra%C3%9Fe%2015%2C%2071065%20Sindelfingen",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-schauwerk-sindelfingen",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/schauwerk.jpg" },
+  },
+
+  {
+    id: "museum-villa-merkel",
+    category: "MUSEUM_KULTUR",
+    name: "Villa Merkel | Bahnwärterhaus - Galerien der Stadt Esslingen",
+    shortTitle: "Villa Merkel",
+    included: "Tageskarte",
+    benefitValue: 0,
+    description:
+      "Galerien für zeitgenössische Kunst in Esslingen.",
+    address: {
+      street: "Pulverwiesen 25",
+      zip: "73726",
+      city: "Esslingen am Neckar",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Pulverwiesen%2025%2C%2073726%20Esslingen%20am%20Neckar",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-villa-merkel",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/villa-merkel.jpg" },
+  },
+
+  {
+    id: "museum-kunstgebaeude",
+    category: "MUSEUM_KULTUR",
+    name: "Kunstgebäude Stuttgart",
+    shortTitle: "Kunstgebäude",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Ausstellungen im Kunstgebäude am Schlossplatz Stuttgart.",
+    address: {
+      street: "Schlossplatz 2",
+      zip: "70173",
+      city: "Stuttgart",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Schlossplatz%202%2C%2070173%20Stuttgart",
+    regionDetailUrl:
+      "https://www.erlebnisregion-stuttgart.de/a-kunstgebaeude-des-wuerttembergischen-kunstvereins-stuttgart",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/kunstgebaeude.jpg" },
+  },
+
+  {
+    id: "museum-maerklineum",
+    category: "MUSEUM_KULTUR",
+    name: "Märklineum & Märklin Store Göppingen",
+    shortTitle: "Märklineum",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Museum und Erlebniswelt rund um Märklin in Göppingen.",
+    address: {
+      street: "Reuschstr. 6",
+      zip: "73033",
+      city: "Göppingen",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Reuschstr.%206%2C%2073033%20G%C3%B6ppingen",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-maerklineum-goeppingen",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/maerklineum.jpg" },
+  },
+
+  {
+    id: "museum-literaturmuseum-limo",
+    category: "MUSEUM_KULTUR",
+    name: "Literaturmuseum der Moderne (LiMo) Marbach am Neckar",
+    shortTitle: "Literaturmuseum LiMo",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Literaturmuseum der Moderne im Deutschen Literaturarchiv Marbach.",
+    address: {
+      street: "Schillerhöhe 8-10",
+      zip: "71672",
+      city: "Marbach am Neckar",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Schillerh%C3%B6he%208-10%2C%2071672%20Marbach%20am%20Neckar",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-literaturmuseum-der-moderne-limo",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/limo.jpg" },
+  },
+
+  {
+    id: "museum-schiller-nationalmuseum",
+    category: "MUSEUM_KULTUR",
+    name: "Schiller-Nationalmuseum in Marbach am Neckar",
+    shortTitle: "Schiller-Nationalmuseum",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Museum zu Leben und Werk von Friedrich Schiller.",
+    address: {
+      street: "Schillerhöhe 8-10",
+      zip: "71672",
+      city: "Marbach am Neckar",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Schillerh%C3%B6he%208-10%2C%2071672%20Marbach%20am%20Neckar",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-schiller-nationalmuseum",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/schiller-nationalmuseum.jpg" },
+  },
+
+  {
+    id: "museum-tobias-mayer",
+    category: "MUSEUM_KULTUR",
+    name: "Tobias-Mayer Museum Marbach am Neckar",
+    shortTitle: "Tobias-Mayer Museum",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Museum zum Astronomen und Kartografen Tobias Mayer.",
+    address: {
+      street: "Torgasse 13",
+      zip: "71672",
+      city: "Marbach am Neckar",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Torgasse%2013%2C%2071672%20Marbach%20am%20Neckar",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-tobias-mayer-museum",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/tobias-mayer.jpg" },
+  },
+
+  {
+    id: "museum-hohenloher-freilandmuseum",
+    category: "MUSEUM_KULTUR",
+    name: "Hohenloher Freilandmuseum Schwäbisch Hall",
+    shortTitle: "Hohenloher Freilandmuseum",
+    included: "Eintritt frei",
+    benefitValue: 0,
+    description:
+      "Freilichtmuseum mit historischen Gebäuden aus Hohenlohe.",
+    address: {
+      street: "Moorwiesenweg 1",
+      zip: "74523",
+      city: "Schwäbisch Hall",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Moorwiesenweg%201%2C%2074523%20Schw%C3%A4bisch%20Hall",
+    regionDetailUrl:
+      "https://www.erlebnisregion-stuttgart.de/a-hohenloher-freilandmuseum-schwaebisch-hall-wackershofen",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffnungszeiten bitte vorab auf der Partnerseite prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/museum/hohenloher.jpg" },
+  },
   // =========================================================
   // STADTERLEBNIS
   // =========================================================
@@ -1203,6 +1851,34 @@ export const ATTRACTIONS: Attraction[] = [
       },
     ],
     image: { thumbUrl: "/images/placeholder/stadt/gmuend.jpg" },
+  },
+
+  {
+    id: "stadterlebnis-stadtfuehrung-schwaebisch-hall",
+    category: "STADTERLEBNIS",
+    name: "Öffentliche Stadtführung Schwäbisch Hall",
+    shortTitle: "Stadtführung Schwäbisch Hall",
+    included: "kostenlose Stadtführung",
+    benefitValue: 0,
+    description:
+      "Öffentliche Stadtführung durch die Altstadt von Schwäbisch Hall.",
+    address: {
+      street: "Hafenmarkt 3",
+      zip: "74523",
+      city: "Schwäbisch Hall",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Hafenmarkt%203%2C%2074523%20Schw%C3%A4bisch%20Hall",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-oeffentliche-stadtfuehrung-schwaebisch-hall",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Stadtführungen finden zu festen Terminen statt – bitte vorab prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/stadt/schwaebisch-hall.jpg" },
   },
 
   {
@@ -1464,6 +2140,34 @@ export const ATTRACTIONS: Attraction[] = [
       },
     ],
     image: { thumbUrl: "/images/placeholder/ausflug/weingaertner.jpg" },
+  },
+
+  {
+    id: "ausflug-kellerblicke",
+    category: "AUSFLUGSZIELE",
+    name: "Kellerblicke - Kellerführung mit 3er Weinprobe",
+    shortTitle: "Kellerblicke",
+    included: "kostenfreie Kellerführung",
+    benefitValue: 0,
+    description:
+      "Kellerführung mit Weinprobe bei den Fellbacher Weingärtnern.",
+    address: {
+      street: "Kappelbergstraße 48",
+      zip: "70734",
+      city: "Fellbach",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Kappelbergstra%C3%9Fe%2048%2C%2070734%20Fellbach",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-kellerblicke-kellerfuehrung-mit-3er-weinprobe",
+    openingHours: [
+      {
+        days: ["—"],
+        from: "—",
+        to: "—",
+        note: "Kellerblicke nur zu festgelegten Terminen – Anmeldung erforderlich.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/ausflug/kellerblicke.jpg" },
   },
 
   {
