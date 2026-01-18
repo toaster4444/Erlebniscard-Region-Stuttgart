@@ -5,6 +5,11 @@ import { fileURLToPath } from "node:url";
 const nextConfig = {
   // Vercel-friendly defaults
   reactStrictMode: true,
+  turbopack: {
+    resolveAlias: {
+      "@": path.dirname(fileURLToPath(import.meta.url))
+    }
+  },
   webpack(config) {
     const rootDir = path.dirname(fileURLToPath(import.meta.url));
     config.resolve.alias["@"] = rootDir;
