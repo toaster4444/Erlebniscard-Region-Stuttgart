@@ -77,6 +77,14 @@ export default function HomePage() {
 
   const total = ATTRACTIONS.length;
   const visitedCount = visited.size;
+  const visitedSavings = useMemo(() => {
+    return ATTRACTIONS.reduce((sum, attraction) => {
+      if (visited.has(attraction.id)) {
+        return sum + attraction.benefitValue;
+      }
+      return sum;
+    }, 0);
+  }, [visited]);
 
   const order: CategoryKey[] = [
     "MUSEUM_KULTUR",
@@ -93,6 +101,7 @@ export default function HomePage() {
         onQueryChange={setQuery}
         visitedCount={visitedCount}
         total={total}
+        visitedSavings={visitedSavings}
       />
 
       <main className="container">

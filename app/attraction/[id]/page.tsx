@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ATTRACTIONS } from "@/data/attractions";
+import { formatEuro } from "@/lib/utils";
 
 export default async function AttractionDetailPage({
   params
@@ -66,6 +67,11 @@ export default async function AttractionDetailPage({
                 </div>
               ))}
             </div>
+          </div>
+
+          <div>
+            <div className="label">Vorteilswert</div>
+            <div className="value">{formatEuro(a.benefitValue)}</div>
           </div>
 
           <div>

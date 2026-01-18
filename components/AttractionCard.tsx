@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Attraction } from "@/data/attractions";
+import { formatEuro } from "@/lib/utils";
 
 export function AttractionCard(props: {
   attraction: Attraction;
@@ -24,6 +25,7 @@ export function AttractionCard(props: {
       <div className="meta">
         <p className="name">{a.name}</p>
         <p className="desc">{a.included}</p>
+        <p className="benefit">Vorteil: {formatEuro(a.benefitValue)}</p>
       </div>
 
       <div className="actions">
