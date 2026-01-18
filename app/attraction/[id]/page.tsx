@@ -29,6 +29,9 @@ export default async function AttractionDetailPage({
   }
 
   const mapsLink = a.mapsUrl ?? null;
+  const regionDetailLink =
+    a.regionDetailUrl ?? `https://www.erlebnisregion-stuttgart.de/a-${a.id.replace(/^[^-]+-/, "")}`;
+  const providerLink = a.websiteUrl ?? regionDetailLink ?? null;
   const address = `${a.address.street}, ${a.address.zip} ${a.address.city}`;
 
   return (
@@ -39,11 +42,18 @@ export default async function AttractionDetailPage({
             ← Zurück
           </Link>
 
-          {mapsLink ? (
-            <a className="smalllink" href={mapsLink} target="_blank" rel="noreferrer">
-              In Google Maps öffnen
-            </a>
-          ) : null}
+          <div className="detail-links">
+            {mapsLink ? (
+              <a className="smalllink" href={mapsLink} target="_blank" rel="noreferrer">
+                In Google Maps öffnen
+              </a>
+            ) : null}
+            {providerLink ? (
+              <a className="smalllink" href={providerLink} target="_blank" rel="noreferrer">
+                Internetseite des Anbieters
+              </a>
+            ) : null}
+          </div>
         </div>
 
         <h1>{a.name}</h1>
@@ -56,6 +66,17 @@ export default async function AttractionDetailPage({
             <div className="label">Ort / Adresse</div>
             <div className="value">{address}</div>
           </div>
+
+          {regionDetailLink ? (
+            <div>
+              <div className="label">Details Erlebnisregion Stuttgart</div>
+              <div className="value">
+                <a className="smalllink" href={regionDetailLink} target="_blank" rel="noreferrer">
+                  Zur Detailseite
+                </a>
+              </div>
+            </div>
+          ) : null}
 
           <div>
             <div className="label">Öffnungszeiten</div>

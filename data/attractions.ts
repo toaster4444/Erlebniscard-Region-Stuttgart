@@ -50,6 +50,12 @@ export type Attraction = {
   // Clickable google maps link
   mapsUrl: string;
 
+  // Official provider website (if available)
+  websiteUrl?: string;
+
+  // Detail page on erlebnisregion-stuttgart.de (if available)
+  regionDetailUrl?: string;
+
   // Generic opening hours. For seasonal facilities, also use seasonNote and/or closureNote.
   openingHours: OpeningHoursRule[];
 
