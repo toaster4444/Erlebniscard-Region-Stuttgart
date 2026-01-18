@@ -7,7 +7,9 @@ import { formatEuro } from "@/lib/utils";
 export function AttractionCard(props: {
   attraction: Attraction;
   visited: boolean;
+  benefitValue: number;
   onToggleRequested: (id: string, nextVisited: boolean) => void;
+  onEditSavings: (id: string) => void;
 }) {
   const a = props.attraction;
 
@@ -25,13 +27,18 @@ export function AttractionCard(props: {
       <div className="meta">
         <p className="name">{a.name}</p>
         <p className="desc">{a.included}</p>
-        <p className="benefit">Vorteil: {formatEuro(a.benefitValue)}</p>
+        <p className="benefit">Vorteil: {formatEuro(props.benefitValue)}</p>
       </div>
 
       <div className="actions">
         <Link className="smalllink" href={`/attraction/${a.id}`}>
           Details
         </Link>
+        {props.visited ? (
+          <button className="smalllink" type="button" onClick={() => props.onEditSavings(a.id)}>
+            Bearbeiten
+          </button>
+        ) : null}
 
         <button
           className="checkbox"

@@ -6,6 +6,8 @@ export function CategorySection(props: {
   items: Attraction[];
   visitedSet: Set<string>;
   onToggleRequested: (id: string, nextVisited: boolean) => void;
+  onEditSavings: (id: string) => void;
+  getBenefitValue: (id: string) => number;
 }) {
   if (props.items.length === 0) return null;
 
@@ -18,7 +20,9 @@ export function CategorySection(props: {
             key={a.id}
             attraction={a}
             visited={props.visitedSet.has(a.id)}
+            benefitValue={props.getBenefitValue(a.id)}
             onToggleRequested={props.onToggleRequested}
+            onEditSavings={props.onEditSavings}
           />
         ))}
       </div>

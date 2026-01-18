@@ -2,25 +2,39 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ATTRACTIONS, CATEGORY_LABELS, CategoryKey } from "@/data/attractions";
-import { loadVisited, saveVisited } from "@/lib/storage";
-import { normalize } from "@/lib/utils";
+import { loadSavings, loadVisited, saveSavings, saveVisited } from "@/lib/storage";
+import { formatEuro, normalize } from "@/lib/utils";
 import { TopBar } from "@/components/TopBar";
 import { CategorySection } from "@/components/CategorySection";
 import { ConfirmModal } from "@/components/ConfirmModal";
+import { SavingsModal } from "@/components/SavingsModal";
 
 export default function HomePage() {
   const [visited, setVisited] = useState<Set<string>>(new Set());
+  const [savings, setSavings] = useState<Record<string, number>>({});
   const [query, setQuery] = useState("");
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [pending, setPending] = useState<{ id: string; next: boolean } | null>(null);
+  const [savingsOpen, setSavingsOpen] = useState(false);
+  const [savingsTarget, setSavingsTarget] = useState<string | null>(null);
+  const [savingsValue, setSavingsValue] = useState("");
 
   useEffect(() => {
     setVisited(loadVisited());
+    setSavings(loadSavings());
   }, []);
 
   useEffect(() => {
     saveVisited(visited);
   }, [visited]);
+
+  useEffect(() => {
+    saveSavings(savings);
+  }, [savings]);
+
+  const attractionMap = useMemo(() => {
+    return new Map(ATTRACTIONS.map((a) => [a.id, a]));
+  }, []);
 
   const filtered = useMemo(() => {
     const q = normalize(query);
@@ -60,12 +74,29 @@ export default function HomePage() {
 
   function confirmToggle() {
     if (!pending) return;
-    setVisited((prev) => {
-      const next = new Set(prev);
-      if (pending.next) next.add(pending.id);
-      else next.delete(pending.id);
-      return next;
-    });
+    if (pending.next) {
+      setVisited((prev) => {
+        const next = new Set(prev);
+        next.add(pending.id);
+        return next;
+      });
+      const attraction = attractionMap.get(pending.id);
+      const defaultValue = attraction ? attraction.benefitValue : 0;
+      setSavingsTarget(pending.id);
+      setSavingsValue(defaultValue.toFixed(2));
+      setSavingsOpen(true);
+    } else {
+      setVisited((prev) => {
+        const next = new Set(prev);
+        next.delete(pending.id);
+        return next;
+      });
+      setSavings((prev) => {
+        const next = { ...prev };
+        delete next[pending.id];
+        return next;
+      });
+    }
     setConfirmOpen(false);
     setPending(null);
   }
@@ -75,16 +106,48 @@ export default function HomePage() {
     setPending(null);
   }
 
+  function openSavingsEditor(id: string) {
+    const attraction = attractionMap.get(id);
+    const fallback = attraction ? attraction.benefitValue : 0;
+    const current = savings[id] ?? fallback;
+    setSavingsTarget(id);
+    setSavingsValue(current.toFixed(2));
+    setSavingsOpen(true);
+  }
+
+  function closeSavingsEditor() {
+    setSavingsOpen(false);
+    setSavingsTarget(null);
+  }
+
+  function confirmSavings() {
+    if (!savingsTarget) return;
+    const normalized = savingsValue.replace(",", ".");
+    const parsed = Number.parseFloat(normalized);
+    if (Number.isNaN(parsed)) return;
+    setSavings((prev) => ({
+      ...prev,
+      [savingsTarget]: parsed,
+    }));
+    closeSavingsEditor();
+  }
+
+  const getBenefitValue = (id: string) => {
+    const attraction = attractionMap.get(id);
+    const fallback = attraction ? attraction.benefitValue : 0;
+    return savings[id] ?? fallback;
+  };
+
   const total = ATTRACTIONS.length;
   const visitedCount = visited.size;
   const visitedSavings = useMemo(() => {
     return ATTRACTIONS.reduce((sum, attraction) => {
       if (visited.has(attraction.id)) {
-        return sum + attraction.benefitValue;
+        return sum + getBenefitValue(attraction.id);
       }
       return sum;
     }, 0);
-  }, [visited]);
+  }, [visited, savings, attractionMap]);
 
   const order: CategoryKey[] = [
     "MUSEUM_KULTUR",
@@ -112,6 +175,8 @@ export default function HomePage() {
             items={grouped.get(cat) ?? []}
             visitedSet={visited}
             onToggleRequested={requestToggle}
+            onEditSavings={openSavingsEditor}
+            getBenefitValue={getBenefitValue}
           />
         ))}
       </main>
@@ -124,6 +189,18 @@ export default function HomePage() {
         cancelText="Abbrechen"
         onConfirm={confirmToggle}
         onCancel={cancelToggle}
+      />
+
+      <SavingsModal
+        open={savingsOpen}
+        title="Vorteilswert bestätigen"
+        description={`Trage den tatsächlichen Vorteil ein. Vorgeschlagen: ${formatEuro(
+          savingsTarget ? getBenefitValue(savingsTarget) : 0
+        )}.`}
+        value={savingsValue}
+        onChange={setSavingsValue}
+        onConfirm={confirmSavings}
+        onCancel={closeSavingsEditor}
       />
     </>
   );
