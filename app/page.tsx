@@ -183,9 +183,13 @@ export default function HomePage() {
 
       <ConfirmModal
         open={confirmOpen}
-        title="Schon besucht?"
-        description="Willst du diese Attraktion als besucht markieren? Dann wird sie ausgegraut und ans Ende der Liste verschoben."
-        confirmText="Ja, besucht"
+        title={pending?.next ? "Schon besucht?" : "Doch nicht besucht?"}
+        description={
+          pending?.next
+            ? "Willst du diese Attraktion als besucht markieren? Dann wird sie ausgegraut und ans Ende der Liste verschoben."
+            : "Hast du diese Attraktion doch nicht besucht? Dann wird sie wieder normal angezeigt und in der Liste nach oben sortiert."
+        }
+        confirmText={pending?.next ? "Ja, besucht" : "Ja, nicht besucht"}
         cancelText="Abbrechen"
         onConfirm={confirmToggle}
         onCancel={cancelToggle}
