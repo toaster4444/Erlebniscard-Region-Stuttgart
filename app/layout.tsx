@@ -4,7 +4,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "ErlebnisCard Tracker",
   description: "Leistungen der ErlebnisCard abhaken – lokal gespeichert.",
-  manifest: "/manifest.webmanifest",
+  manifest: "/manifest.webmanifest"
+};
+
+export const viewport = {
   themeColor: "#0b1220"
 };
 

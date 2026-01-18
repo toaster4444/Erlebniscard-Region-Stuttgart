@@ -15,7 +15,8 @@ export type Weekday =
   | "Fr"
   | "Sa"
   | "So"
-  | "Feiertag";
+  | "Feiertag"
+  | "—";
 
 export type OpeningHoursRule = {
   days: Weekday[]; // e.g. ["Mo","Di"] or ["Mo","Di","Mi","Do","Fr","Sa","So","Feiertag"]
@@ -1491,3 +1492,14 @@ export const ATTRACTIONS: Attraction[] = [
   image: { thumbUrl: "/images/placeholder/ausflug/wilhelma.jpg" },
 },
 
+];
+
+export type CategoryKey = AttractionCategory;
+
+export const CATEGORY_LABELS: Record<CategoryKey, string> = {
+  WASSERSPASS: "Wasserspaß",
+  AKTIV_UNTERWEGS: "Aktiv unterwegs",
+  MUSEUM_KULTUR: "Museum & Kultur",
+  STADTERLEBNIS: "Stadterlebnis",
+  AUSFLUGSZIELE: "Ausflugsziele",
+};
