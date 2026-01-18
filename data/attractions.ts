@@ -1159,7 +1159,7 @@ export const ATTRACTIONS: Attraction[] = [
     image: { thumbUrl: "/images/placeholder/stadt/schorndorf.jpg" },
   },
 
-  {
+    {
     id: "stadterlebnis-historische-stadtfuehrung-nuertingen",
     category: "STADTERLEBNIS",
     name: "Öffentliche historische Stadtführung Nürtingen",
@@ -1319,6 +1319,7 @@ export const ATTRACTIONS: Attraction[] = [
     ],
     image: { thumbUrl: "/images/placeholder/stadt/sindelfingen.jpg" },
   },
+
   // =========================================================
   // AUSFLUGSZIELE
   // =========================================================
@@ -1340,7 +1341,11 @@ export const ATTRACTIONS: Attraction[] = [
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Jahnstra%C3%9Fe+120%2C+70597+Stuttgart",
     openingHours: [
-      { days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"], from: "10:00", to: "22:00" },
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "10:00",
+        to: "22:00",
+      },
     ],
     closureNote:
       "Letzte Auffahrt 30 Minuten vor Schließung. Wetter- oder veranstaltungsbedingte Einschränkungen möglich.",
@@ -1391,16 +1396,8 @@ export const ATTRACTIONS: Attraction[] = [
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Hammerschlag+8%2C+73614+Schorndorf",
     openingHours: [
-      {
-        days: ["Mi", "Do", "Fr"],
-        from: "14:00",
-        to: "18:00",
-      },
-      {
-        days: ["Sa", "So", "Feiertag"],
-        from: "10:00",
-        to: "18:00",
-      },
+      { days: ["Mi", "Do", "Fr"], from: "14:00", to: "18:00" },
+      { days: ["Sa", "So", "Feiertag"], from: "10:00", to: "18:00" },
     ],
     closureNote: "Montag und Dienstag geschlossen.",
     image: { thumbUrl: "/images/placeholder/ausflug/forscherfabrik.jpg" },
@@ -1422,11 +1419,7 @@ export const ATTRACTIONS: Attraction[] = [
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=W%C3%BCrttembergstra%C3%9Fe+340%2C+70327+Stuttgart",
     openingHours: [
-      {
-        days: ["Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
-        from: "10:00",
-        to: "17:00",
-      },
+      { days: ["Mi", "Do", "Fr", "Sa", "So", "Feiertag"], from: "10:00", to: "17:00" },
     ],
     seasonNote: "Saisonbetrieb (April–Oktober).",
     closureNote: "Montag und Dienstag geschlossen.",
@@ -1454,8 +1447,7 @@ export const ATTRACTIONS: Attraction[] = [
         days: ["Mo", "Di", "Mi", "Do", "Fr"],
         from: "—",
         to: "—",
-        note:
-          "Werksführungen nur mit vorheriger Buchung zu festen Zeitfenstern.",
+        note: "Werksführungen nur mit vorheriger Buchung.",
       },
     ],
     closureNote:
@@ -1479,11 +1471,7 @@ export const ATTRACTIONS: Attraction[] = [
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Maienwaldstra%C3%9Fe+2%2C+72555+Metzingen",
     openingHours: [
-      {
-        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa"],
-        from: "10:00",
-        to: "20:00",
-      },
+      { days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa"], from: "10:00", to: "20:00" },
       {
         days: ["So", "Feiertag"],
         from: "—",
@@ -1514,11 +1502,9 @@ export const ATTRACTIONS: Attraction[] = [
         days: ["—"],
         from: "—",
         to: "—",
-        note:
-          "Schlossführungen zu festen Zeiten; Zeiten variieren saisonal – bitte prüfen.",
+        note: "Führungen zu festen Zeiten – saisonabhängig.",
       },
     ],
-    seasonNote: "Ganzjährig, saisonabhängige Führungszeiten.",
     image: { thumbUrl: "/images/placeholder/ausflug/ludwigsburg.jpg" },
   },
 
@@ -1562,11 +1548,7 @@ export const ATTRACTIONS: Attraction[] = [
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Solitude+1%2C+70197+Stuttgart",
     openingHours: [
-      {
-        days: ["Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
-        from: "10:00",
-        to: "17:00",
-      },
+      { days: ["Mi", "Do", "Fr", "Sa", "So", "Feiertag"], from: "10:00", to: "17:00" },
     ],
     seasonNote: "Saisonbetrieb April–Oktober.",
     closureNote: "Montag und Dienstag geschlossen.",
@@ -1594,8 +1576,7 @@ export const ATTRACTIONS: Attraction[] = [
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
         from: "—",
         to: "—",
-        note:
-          "Ganzjährig geöffnet, Öffnungszeiten variieren saisonal – bitte Website prüfen.",
+        note: "Ganzjährig, Öffnungszeiten saisonabhängig.",
       },
     ],
     image: { thumbUrl: "/images/placeholder/ausflug/tripsdrill.jpg" },
@@ -1622,8 +1603,7 @@ export const ATTRACTIONS: Attraction[] = [
         days: ["—"],
         from: "—",
         to: "—",
-        note:
-          "Öffnungszeiten variieren stark je nach Jahreszeit – bitte tagesaktuell prüfen.",
+        note: "Öffnungszeiten variieren je nach Jahreszeit.",
       },
     ],
     seasonNote: "Ganzjährig geöffnet.",
