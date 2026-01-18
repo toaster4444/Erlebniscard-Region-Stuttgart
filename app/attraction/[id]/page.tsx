@@ -29,9 +29,8 @@ export default async function AttractionDetailPage({
   }
 
   const mapsLink = a.mapsUrl ?? null;
-  const regionDetailLink =
-    a.regionDetailUrl ?? `https://www.erlebnisregion-stuttgart.de/a-${a.id.replace(/^[^-]+-/, "")}`;
-  const providerLink = a.websiteUrl ?? regionDetailLink ?? null;
+  const regionDetailLink = a.regionDetailUrl ?? null;
+  const providerLink = a.websiteUrl ?? null;
   const address = `${a.address.street}, ${a.address.zip} ${a.address.city}`;
 
   return (
