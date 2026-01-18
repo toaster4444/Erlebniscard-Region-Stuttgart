@@ -6,3 +6,10 @@ export function googleMapsLinkFromQuery(query: string) {
 export function normalize(s: string) {
   return s.trim().toLowerCase();
 }
+
+export function formatEuro(value: number) {
+  return new Intl.NumberFormat("de-DE", {
+    style: "currency",
+    currency: "EUR"
+  }).format(value);
+}

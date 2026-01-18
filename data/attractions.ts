@@ -35,6 +35,9 @@ export type Attraction = {
   // What exactly is included with the ErlebnisCard (as on flyer / partner page)
   included: string;
 
+  // Price value of the included benefit (in EUR)
+  benefitValue: number;
+
   // Short description shown in list + detail page
   description: string;
 
@@ -73,6 +76,7 @@ export const ATTRACTIONS: Attraction[] = [
     shortTitle: "DAS LEUZE",
     included:
       "Eintritt Schwimmbad; Sauna kann gegen Aufzahlung zugebucht werden",
+    benefitValue: 0,
     description:
       "Große Erlebnis-Therme am Neckar mit Mineralwasser-Becken innen/außen. Mit der ErlebnisCard ist der Eintritt ins Schwimmbad inklusive; Sauna optional gegen Aufzahlung.",
     address: {
@@ -105,6 +109,7 @@ export const ATTRACTIONS: Attraction[] = [
     shortTitle: "F3 Fellbach",
     included:
       "Freier Eintritt; Rutschen können zugebucht werden; Sauna kann nicht zugebucht werden",
+    benefitValue: 0,
     description:
       "Familien- und Freizeitbad in Fellbach. Eintritt ist inklusive; Rutschen sind optional zubuchbar; Sauna ist nicht über die ErlebnisCard zubuchbar.",
     address: {
@@ -133,6 +138,7 @@ export const ATTRACTIONS: Attraction[] = [
     name: "Höhenfreibad Bad Urach",
     shortTitle: "Höhenfreibad",
     included: "Eintritt frei (Tageskarte)",
+    benefitValue: 0,
     description:
       "Freibad auf dem Tiergartenberg mit großem Sport- und Familienbereich. Mit der ErlebnisCard ist eine kostenlose Tageskarte inklusive.",
     address: {
@@ -164,6 +170,7 @@ export const ATTRACTIONS: Attraction[] = [
     name: "Mineralbad Berg (Stuttgart)",
     shortTitle: "Mineralbad Berg",
     included: "Kostenloser Eintritt (Badezeit: 2 Stunden)",
+    benefitValue: 0,
     description:
       "Stuttgarts traditionsreiche Therme (‚Neuner‘) mit naturbelassenem Mineralwasser. Mit der ErlebnisCard ist ein 2-Stunden-Eintritt inklusive.",
     address: {
@@ -192,6 +199,7 @@ export const ATTRACTIONS: Attraction[] = [
     name: "Mineralfreibad Gaildorf (Kieselberg)",
     shortTitle: "Mineralfreibad Gaildorf",
     included: "1 Tageskarte",
+    benefitValue: 0,
     description:
       "Mineralfreibad in Aussichtslage am Kieselberg. Mit der ErlebnisCard ist eine Tageskarte inklusive.",
     address: {
@@ -224,6 +232,7 @@ export const ATTRACTIONS: Attraction[] = [
     shortTitle: "Mineraltherme Böblingen",
     included:
       "Kostenloser Eintritt Thermalbad & Classic-Sauna (Badezeit: 3 Std.); Saunagarten kann zugebucht werden",
+    benefitValue: 0,
     description:
       "Thermalbad mit Außenbecken; Classic-Sauna ist innerhalb der inkludierten Zeit dabei, Saunagarten optional zubuchbar.",
     address: {
@@ -247,6 +256,7 @@ export const ATTRACTIONS: Attraction[] = [
     name: "Oskar Frech SeeBad (Schorndorf)",
     shortTitle: "Oskar Frech SeeBad",
     included: "Kostenloser Eintritt in das Bad und eingeschränkter Eintritt in die Sauna (4 Std.)",
+    benefitValue: 0,
     description:
       "Hochmodernes Familienbad mit Rutsche; Erlebnisbad-Eintritt ist inklusive, Sauna eingeschränkt (4 Std.).",
     address: {
@@ -271,6 +281,7 @@ export const ATTRACTIONS: Attraction[] = [
     shortTitle: "Panorama Therme",
     included:
       "Kostenloser Eintritt Thermalbad (Badezeit: 2,5 Std.); Sauna kann zugebucht werden",
+    benefitValue: 0,
     description:
       "Therme mit Blick auf die Alb. Thermalbad ist für 2,5 Stunden inklusive, Sauna optional zubuchbar.",
     address: {
@@ -296,6 +307,7 @@ export const ATTRACTIONS: Attraction[] = [
     name: "Paracelsus-Therme & Sauna Pinea (Bad Liebenzell)",
     shortTitle: "Paracelsus-Therme",
     included: "Freier Eintritt Paracelsus-Therme und Sauna-Pinea",
+    benefitValue: 0,
     description:
       "Thermalbad mit Sauna Pinea. Laut Vorteil ist der Eintritt in Therme und Sauna inklusive.",
     address: {
@@ -322,6 +334,7 @@ export const ATTRACTIONS: Attraction[] = [
     shortTitle: "SoleBad Cannstatt",
     included:
       "Kostenloser Eintritt Schwimmbad (Badezeit: 2 Std.); Sauna kann gegen Aufzahlung zugebucht werden",
+    benefitValue: 0,
     description:
       "Sole- und Heilwasser-Therme mit Sauna/Dampfbad. Schwimmbad ist 2 Stunden inklusive; Sauna optional gegen Aufzahlung.",
     address: {
@@ -351,6 +364,7 @@ export const ATTRACTIONS: Attraction[] = [
     name: "Vinzenz Therme (Bad Ditzenbach)",
     shortTitle: "Vinzenz Therme",
     included: "Eintritt frei; Sauna kann gegen Aufzahlung zugebucht werden",
+    benefitValue: 0,
     description:
       "Thermalbad in Bad Ditzenbach. Eintritt ist inklusive; Sauna ist optional gegen Aufzahlung zubuchbar.",
     address: {
@@ -378,6 +392,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Adventure Golf Vaihingen an der Enz",
   shortTitle: "Adventure Golf",
   included: "Eintritt frei",
+  benefitValue: 0,
   description:
     "Abwechslungsreiche Adventure-Golf-Anlage mit thematisch gestalteten Bahnen – für Familien und Gruppen geeignet.",
   address: {
@@ -406,6 +421,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "CITYGOLF Stuttgart",
   shortTitle: "CityGolf",
   included: "Tages-Greenfee",
+  benefitValue: 0,
   description:
     "Urbanes Golf-Erlebnis mitten in Stuttgart – Golf spielen ohne Clubmitgliedschaft.",
   address: {
@@ -436,6 +452,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Eisstadion Polarion Bad Liebenzell",
   shortTitle: "Polarion",
   included: "Tageskarte",
+  benefitValue: 0,
   description:
     "Eisstadion mit öffentlichem Eislauf, Discolauf und Familienangeboten.",
   address: {
@@ -464,6 +481,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Entdeckerwelt Bad Urach",
   shortTitle: "Entdeckerwelt",
   included: "Eintritt frei inkl. Tablet-Ausleihe",
+  benefitValue: 0,
   description:
     "Interaktive Erlebniswelt mit digitalen Entdeckertouren rund um Bad Urach.",
   address: {
@@ -495,6 +513,7 @@ export const ATTRACTIONS: Attraction[] = [
   shortTitle: "GolfKultur",
   included:
     "Kostenfreies Rangepaket inkl. Leihschläger + Tages-Rangefee inkl. 70 Bälle",
+    benefitValue: 0,
   description:
     "Moderne Golf-Range mit Trainingsflächen und Kurzplatz ‚Little Augusta‘.",
   address: {
@@ -525,6 +544,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "pause & play EscapeRooms Stuttgart",
   shortTitle: "EscapeRooms",
   included: "20 % Rabatt",
+  benefitValue: 0,
   description:
     "Live Escape Rooms mit verschiedenen Themen – Teamwork und Rätselspaß.",
   address: {
@@ -551,6 +571,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "SKYPARK epia Kletterwald Schwäbisch Gmünd",
   shortTitle: "SKYPARK epia",
   included: "Tageskarte",
+  benefitValue: 0,
   description:
     "Hochseilgarten mit Parcours verschiedener Schwierigkeitsgrade in Waldlage.",
   address: {
@@ -579,6 +600,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Sprungbude Bad Cannstatt",
   shortTitle: "Sprungbude",
   included: "60 Minuten Sprungzeit",
+  benefitValue: 0,
   description:
     "Trampolinpark mit Ninja-Parcours, Sprungflächen und Action-Arealen.",
   address: {
@@ -601,6 +623,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Sprungbude Filderstadt",
   shortTitle: "Sprungbude",
   included: "60 Minuten Sprungzeit",
+  benefitValue: 0,
   description:
     "Großer Trampolinpark nahe Flughafen Stuttgart – ideal für Familien und Gruppen.",
   address: {
@@ -626,6 +649,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Carl-Schweizer-Museum",
   shortTitle: "Carl-Schweizer-Museum",
   included: "Freier Eintritt inkl. Führung",
+  benefitValue: 0,
   description:
     "Regionalmuseum zur Stadt- und Kulturgeschichte von Murrhardt mit wechselnden Sonderausstellungen.",
   address: {
@@ -652,6 +676,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Deutsches Landwirtschaftsmuseum Stuttgart",
   shortTitle: "Landwirtschaftsmuseum",
   included: "Tageskarte",
+  benefitValue: 0,
   description:
     "Technik- und Kulturgeschichte der Landwirtschaft mit historischen Maschinen und Geräten.",
   address: {
@@ -678,6 +703,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Faszination Psyche",
   shortTitle: "Faszination Psyche",
   included: "Eintritt frei",
+  benefitValue: 0,
   description:
     "Erlebnisausstellung zur Funktionsweise der menschlichen Psyche – interaktiv und multimedial.",
   address: {
@@ -703,6 +729,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Freilichtmuseum Beuren",
   shortTitle: "Freilichtmuseum Beuren",
   included: "Tageskarte",
+  benefitValue: 0,
   description:
     "Historische Gebäude und Alltagskultur aus dem ländlichen Württemberg.",
   address: {
@@ -729,6 +756,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Galerie Stihl Waiblingen",
   shortTitle: "Galerie Stihl",
   included: "Eintritt frei",
+  benefitValue: 0,
   description:
     "Hochwertige Ausstellungen moderner und zeitgenössischer Kunst.",
   address: {
@@ -759,6 +787,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Mercedes-Benz Museum",
   shortTitle: "Mercedes-Benz Museum",
   included: "Eintritt frei",
+  benefitValue: 0,
   description:
     "Automobilgeschichte von den Anfängen bis zur Gegenwart auf 9 Ebenen.",
   address: {
@@ -785,6 +814,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Porsche Museum",
   shortTitle: "Porsche Museum",
   included: "Eintritt frei",
+  benefitValue: 0,
   description:
     "Markengeschichte, Rennsport und Design von Porsche in moderner Architektur.",
   address: {
@@ -811,6 +841,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Museum am Löwentor (Naturkundemuseum)",
   shortTitle: "Museum am Löwentor",
   included: "Kombiticket mit Schloss Rosenstein",
+  benefitValue: 0,
   description:
     "Naturkundemuseum mit Fokus auf Evolution, Fossilien und Biodiversität.",
   address: {
@@ -836,6 +867,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Staatsgalerie Stuttgart",
   shortTitle: "Staatsgalerie",
   included: "Tageskarte",
+  benefitValue: 0,
   description:
     "Internationale Kunst von der Klassischen Moderne bis zur Gegenwart.",
   address: {
@@ -870,6 +902,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Altstadtrundgang Esslingen am Neckar",
   shortTitle: "Altstadtrundgang Esslingen",
   included: "Ticket für eine Stadtführung",
+  benefitValue: 0,
   description:
     "Geführter Rundgang durch die mittelalterliche Altstadt von Esslingen mit Fachwerkhäusern und historischen Plätzen.",
   address: {
@@ -897,6 +930,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Citytour Stuttgart – Blaue Tour",
   shortTitle: "Citytour Stuttgart",
   included: "Tagesticket Blaue Tour",
+  benefitValue: 0,
   description:
     "Hop-on-Hop-off-Bustour durch Stuttgart mit audiogeführten Informationen zu Sehenswürdigkeiten.",
   address: {
@@ -925,6 +959,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Historische Stadtführung Göppingen",
   shortTitle: "Stadtführung Göppingen",
   included: "Ticket für eine Stadtführung",
+  benefitValue: 0,
   description:
     "Historischer Rundgang durch Göppingen mit Einblicken in Stadtgeschichte und Architektur.",
   address: {
@@ -952,6 +987,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Historische Stadtführung Kirchheim unter Teck",
   shortTitle: "Stadtführung Kirchheim",
   included: "Ticket für eine Stadtführung",
+  benefitValue: 0,
   description:
     "Rundgang durch die historische Altstadt von Kirchheim unter Teck.",
   address: {
@@ -979,6 +1015,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Historische Stadtführung Schwäbisch Gmünd",
   shortTitle: "Stadtführung Schwäbisch Gmünd",
   included: "Ticket für eine Stadtführung",
+  benefitValue: 0,
   description:
     "Entdeckungstour durch eine der ältesten Stauferstädte mit reicher Geschichte.",
   address: {
@@ -1006,6 +1043,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Offene Stadtführung Schorndorf",
   shortTitle: "Stadtführung Schorndorf",
   included: "Ticket für eine Stadtführung",
+  benefitValue: 0,
   description:
     "Geführter Rundgang durch die Daimlerstadt Schorndorf.",
   address: {
@@ -1033,6 +1071,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Öffentliche historische Stadtführung Nürtingen",
   shortTitle: "Stadtführung Nürtingen",
   included: "Ticket für eine Stadtführung",
+  benefitValue: 0,
   description:
     "Historische Stadtführung durch Nürtingen mit Fokus auf Altstadt und Neckar.",
   address: {
@@ -1060,6 +1099,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Öffentliche historische Stadtführung Bad Wildbad",
   shortTitle: "Stadtführung Bad Wildbad",
   included: "Ticket für eine Stadtführung",
+  benefitValue: 0,
   description:
     "Historischer Rundgang durch den Kurort Bad Wildbad im Schwarzwald.",
   address: {
@@ -1087,6 +1127,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Stadtführung Ludwigsburg – „Ludwigsburg auf einen Blick“",
   shortTitle: "Stadtführung Ludwigsburg",
   included: "Ticket für eine Stadtführung",
+  benefitValue: 0,
   description:
     "Kompakte Einführung in die Geschichte der Barockstadt Ludwigsburg.",
   address: {
@@ -1114,6 +1155,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Stadtführung Murrhardt",
   shortTitle: "Stadtführung Murrhardt",
   included: "Ticket für eine Stadtführung",
+  benefitValue: 0,
   description:
     "Historischer Rundgang durch die Klosterstadt Murrhardt.",
   address: {
@@ -1141,6 +1183,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Stadtführung Plochingen – Hundertwasser",
   shortTitle: "Stadtführung Plochingen",
   included: "Ticket für eine Stadtführung",
+  benefitValue: 0,
   description:
     "Führung rund um das Hundertwasserhaus und die Altstadt von Plochingen.",
   address: {
@@ -1168,6 +1211,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Stadtführung Sindelfingen",
   shortTitle: "Stadtführung Sindelfingen",
   included: "Ticket für eine Stadtführung",
+  benefitValue: 0,
   description:
     "Stadtführung durch die historische Altstadt und das Fachwerkviertel.",
   address: {
@@ -1198,6 +1242,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "SWR Fernsehturm Stuttgart",
   shortTitle: "Fernsehturm Stuttgart",
   included: "Tageskarte",
+  benefitValue: 0,
   description:
     "Erster Fernsehturm der Welt aus Stahlbeton mit Aussichtsplattform und Café.",
   address: {
@@ -1221,6 +1266,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Fellbacher Weingärtner eG",
   shortTitle: "Fellbacher Weingärtner",
   included: "Teilnahme Kellerblicke",
+  benefitValue: 0,
   description:
     "Einblick in den Weinkeller der Fellbacher Weingärtner mit Führung.",
   address: {
@@ -1247,6 +1293,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Forscherfabrik Schorndorf",
   shortTitle: "Forscherfabrik",
   included: "3-Stunden-Ticket Erwachsene",
+  benefitValue: 0,
   description:
     "Mitmach-Ausstellungen zu Technik und Naturwissenschaften – ideal für Familien.",
   address: {
@@ -1278,6 +1325,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Grabkapelle auf dem Württemberg",
   shortTitle: "Grabkapelle Württemberg",
   included: "Eintritt frei",
+  benefitValue: 0,
   description:
     "Klassizistisches Mausoleum mit Blick über das Neckartal.",
   address: {
@@ -1305,6 +1353,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Mercedes-Benz Kundencenter Sindelfingen",
   shortTitle: "MB Kundencenter",
   included: "Werkbesichtigung Kompakt Plus oder Intensiv",
+  benefitValue: 0,
   description:
     "Geführte Werksbesichtigung durch eines der größten Automobilwerke weltweit.",
   address: {
@@ -1334,6 +1383,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "OUTLETCITY METZINGEN",
   shortTitle: "Outletcity Metzingen",
   included: "VIP-Shopping Day",
+  benefitValue: 0,
   description:
     "International bekanntes Outlet mit über 100 Marken.",
   address: {
@@ -1365,6 +1415,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Residenzschloss Ludwigsburg",
   shortTitle: "Residenzschloss",
   included: "Standard-Schlossführung",
+  benefitValue: 0,
   description:
     "Eines der größten erhaltenen Barockschlösser Europas.",
   address: {
@@ -1393,6 +1444,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Ritter Sport Schokoshop Waldenbuch",
   shortTitle: "Ritter Sport",
   included: "5 € Vergütung beim Einkauf (Mindestkaufwert 25 €)",
+  benefitValue: 0,
   description:
     "Markenshop mit Schokoladenvielfalt und Erlebnisbereich.",
   address: {
@@ -1416,6 +1468,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Schloss Solitude",
   shortTitle: "Schloss Solitude",
   included: "Eintritt Standardführung",
+  benefitValue: 0,
   description:
     "Rokokoschloss mit Panorama-Ausblick westlich von Stuttgart.",
   address: {
@@ -1443,6 +1496,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Wildparadies Tripsdrill",
   shortTitle: "Wildparadies Tripsdrill",
   included: "Wildparadies-Pass",
+  benefitValue: 0,
   description:
     "Tierpark mit heimischen Wildtieren, Greifvogelshows und Naturerlebnis.",
   address: {
@@ -1470,6 +1524,7 @@ export const ATTRACTIONS: Attraction[] = [
   name: "Wilhelma Stuttgart",
   shortTitle: "Wilhelma",
   included: "Eintritt frei",
+  benefitValue: 0,
   description:
     "Zoologisch-botanischer Garten mit historischer Architektur.",
   address: {
