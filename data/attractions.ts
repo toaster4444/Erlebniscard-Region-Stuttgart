@@ -50,6 +50,12 @@ export type Attraction = {
   // Clickable google maps link
   mapsUrl: string;
 
+  // Official provider website (if available)
+  websiteUrl?: string;
+
+  // Detail page on erlebnisregion-stuttgart.de (if available)
+  regionDetailUrl?: string;
+
   // Generic opening hours. For seasonal facilities, also use seasonNote and/or closureNote.
   openingHours: OpeningHoursRule[];
 
@@ -86,6 +92,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Am+Leuzebad+2A%2C+70190+Stuttgart",
+    websiteUrl: "https://stuttgarterbaeder.de/leuze",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-das-leuze",
     openingHours: [
       { days: ["Mo", "Di"], from: "06:00", to: "21:00" },
       { days: ["Mi", "Do", "Fr", "Sa"], from: "06:00", to: "23:00" },
@@ -119,6 +127,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Esslinger+Stra%C3%9Fe+102%2C+70734+Fellbach",
+    websiteUrl: "http://www.f3-fellbach.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-f3-das-wohlfuehlbad-fellbach",
     openingHours: [
       // Familienbad
       {
@@ -168,6 +178,7 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Am+Tiergartenberg%2C+72574+Bad+Urach",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-hoehenfreibad-bad-urach-1",
     openingHours: [
       // Zeiten sind saisonabhängig; deshalb bewusst allgemein + Hinweis
       {
@@ -199,6 +210,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Am+Schwanenplatz+9%2C+70190+Stuttgart",
+    websiteUrl: "https://stuttgarterbaeder.de/mineralbadberg",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-mineralbad-berg",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -228,6 +241,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Kieselbergstra%C3%9Fe+12%2C+74405+Gaildorf",
+    websiteUrl: "https://gaildorf.de/adresse/Mineralfreibad-Kieselberg-address1891",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-mineralfreibad-gaildorf",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -260,6 +275,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Am+Hexenbuckel+1%2C+71032+B%C3%B6blingen",
+    websiteUrl: "https://www.mineraltherme-boeblingen.de/start",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-mineraltherme-boeblingen",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -289,6 +306,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Lortzingstra%C3%9Fe+56%2C+73614+Schorndorf",
+    websiteUrl: "https://baederbetriebe.stadtwerke-schorndorf.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-oskar-frech-seebad",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -319,6 +338,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Am+Thermalbad+5%2C+72660+Beuren",
+    websiteUrl: "https://www.panorama-therme.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-panorama-therme-beuren",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -360,6 +381,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Reuchlinweg+4%2C+75378+Bad+Liebenzell",
+    websiteUrl: "http://www.paracelsus-therme.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-paracelsus-therme-bad-liebenzell-sauna-pinea",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -402,6 +425,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Sulzerrainstra%C3%9Fe+2%2C+70372+Stuttgart",
+    websiteUrl: "https://stuttgarterbaeder.de/solebadcannstatt",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-solebad-cannstatt",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -467,6 +492,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Kurhausstra%C3%9Fe+18%2C+73342+Bad+Ditzenbach",
+    websiteUrl: "http://www.vinzenztherme.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-vinzenz-therme",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -499,6 +526,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Walter-de-Pay-Stra%C3%9Fe+10%2C+71665+Vaihingen+an+der+Enz",
+    websiteUrl: "https://www.adventure-golf-vaihingen.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-adventure-golf-vaihingen",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -528,6 +557,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Am+Schnarrenberg+10%2C+70376+Stuttgart",
+    websiteUrl: "https://citygolf-stuttgart.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-citygolf-stuttgart",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr"],
@@ -559,6 +590,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Talwiesen+15%2C+75378+Bad+Liebenzell",
+    websiteUrl: "https://polarion.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-eisstadion-polarion-bad-liebenzell",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -588,6 +621,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Marktplatz+1%2C+72574+Bad+Urach",
+    websiteUrl: "https://www.badurach-tourismus.de/kultur-events/entdeckerwelt/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-entdeckerwelt-bad-urach",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr"],
@@ -620,6 +655,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Sch%C3%B6nbuchstra%C3%9Fe+2%2C+71032+B%C3%B6blingen",
+    websiteUrl: "https://www.golfkultur-stuttgart.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-golfkultur-stuttgart",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr"],
@@ -651,6 +688,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Wagrainstra%C3%9Fe+140%2C+70378+Stuttgart",
+    websiteUrl: "https://pause-play.de/stuttgart/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-pause-play-escape-rooms",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -678,6 +717,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Himmelsgarten+1%2C+73527+Schw%C3%A4bisch+Gm%C3%BCnd",
+    websiteUrl: "http://www.skypark.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-skypark-kletterwald",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -707,6 +748,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Augsburger+Stra%C3%9Fe+606%2C+70329+Stuttgart",
+    websiteUrl: "https://sprungbude.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-sprungbude-stuttgart",
     openingHours: [
       { days: ["Mo", "Di", "Mi", "Do", "Fr"], from: "14:00", to: "21:00" },
       { days: ["Sa", "So", "Feiertag"], from: "10:00", to: "20:00" },
@@ -730,6 +773,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Gutenbergstra%C3%9Fe+30%2C+70794+Filderstadt",
+    websiteUrl: "https://sprungbude.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-sprungbude-filderstadt",
     openingHours: [
       { days: ["Mo", "Di", "Mi", "Do", "Fr"], from: "14:00", to: "21:00" },
       { days: ["Sa", "So", "Feiertag"], from: "10:00", to: "20:00" },
@@ -756,6 +801,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Marktstra%C3%9Fe+48%2C+71540+Murrhardt",
+    websiteUrl: "http://www.carl-schweizer-museum.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-carl-schweizer-museum",
     openingHours: [
       {
         days: ["Mi", "Do", "Fr", "Sa", "So"],
@@ -783,6 +830,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Deutsches+Landwirtschaftsmuseum+Hohenheim+Stuttgart",
+    websiteUrl: "http://www.dlm-hohenheim.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-deutsches-landwirtschaftsmuseum",
     openingHours: [
       {
         days: ["Sa", "So", "Feiertag"],
@@ -810,6 +859,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Breitscheidstra%C3%9Fe+20%2C+70176+Stuttgart",
+    websiteUrl: "https://www.stiftung-psyche.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-ausstellung-faszination-psyche",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr"],
@@ -836,6 +887,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Museumstra%C3%9Fe+1%2C+72660+Beuren",
+    websiteUrl: "https://www.freilichtmuseum-beuren.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-freilichtmuseum-beuren",
     openingHours: [
       {
         days: ["Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -863,6 +916,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Weing%C3%A4rtner+Vorstadt+12%2C+71332+Waiblingen",
+    websiteUrl: "https://www.galerie-stihl-waiblingen.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-galerie-stihl",
     openingHours: [
       {
         days: ["Di", "Mi", "Do", "Fr"],
@@ -894,6 +949,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Mercedesstra%C3%9Fe+100%2C+70372+Stuttgart",
+    websiteUrl: "https://www.mercedes-benz.com/de/kunst-und-kultur/museum/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-mercedes-benz-museum-stuttgart",
     openingHours: [
       {
         days: ["Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -921,6 +978,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Porscheplatz+1%2C+70435+Stuttgart",
+    websiteUrl: "https://www.porsche.de/museum",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-porsche-museum",
     openingHours: [
       {
         days: ["Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -948,6 +1007,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Rosenstein+1%2C+70191+Stuttgart",
+    websiteUrl: "http://www.naturkundemuseum-bw.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-naturkundemuseum-am-loewentor",
     openingHours: [
       {
         days: ["Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -974,6 +1035,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Konrad-Adenauer-Stra%C3%9Fe+30%2C+70173+Stuttgart",
+    websiteUrl: "https://www.staatsgalerie.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-staatsgalerie-stuttgart",
     openingHours: [
       {
         days: ["Di", "Mi", "Do", "Fr"],
@@ -1009,6 +1072,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Marktplatz+73728+Esslingen+am+Neckar",
+    websiteUrl: "https://www.esslingen-info.com/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-altstadtrundgang-esslingen-am-neckar",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -1037,6 +1102,7 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=K%C3%B6nigstra%C3%9Fe+70173+Stuttgart",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-stuttgart-citytour",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -1066,6 +1132,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Rathaus+G%C3%B6ppingen+73033",
+    websiteUrl: "https://www.erlebe-dein-goeppingen.de/stadtfuehrungen/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-historische-stadtfuehrung-goeppingen",
     openingHours: [
       {
         days: ["Sa", "So", "Feiertag"],
@@ -1094,6 +1162,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Max-Eyth-Stra%C3%9Fe+15%2C+73230+Kirchheim+unter+Teck",
+    websiteUrl: "https://www.kirchheim-teck.de/offene-fuehrungen",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-kirchheim-unter-teck-stadtfuehrung",
     openingHours: [
       {
         days: ["Sa", "So", "Feiertag"],
@@ -1122,6 +1192,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Marktplatz+73525+Schw%C3%A4bisch+Gm%C3%BCnd",
+    websiteUrl: "https://www.schwaebisch-gmuend.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-schwaebisch-gmuend",
     openingHours: [
       {
         days: ["Sa", "So", "Feiertag"],
@@ -1148,6 +1220,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Marktplatz+73614+Schorndorf",
+    websiteUrl: "https://www.schorndorf.de/willkommen",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-schorndorf-offene-stadtfuehrung",
     openingHours: [
       {
         days: ["Sa", "So", "Feiertag"],
@@ -1175,6 +1249,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Schillerplatz+72622+N%C3%BCrtingen",
+    websiteUrl: "https://www.nuertingen.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-historische-stadtfuehrung-nuertingen-der-vielseitige-klassiker",
     openingHours: [
       {
         days: ["Sa", "So", "Feiertag"],
@@ -1202,6 +1278,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Kurplatz+75323+Bad+Wildbad",
+    websiteUrl: "https://www.bad-wildbad.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-stadtfuehrung-bad-wildbad-1",
     openingHours: [
       {
         days: ["Sa", "So", "Feiertag"],
@@ -1229,6 +1307,7 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Marktplatz+71634+Ludwigsburg",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-ludwigsburg-auf-einen-blick-stadtfuehrung-luwigsburg",
     openingHours: [
       {
         days: ["Sa", "So", "Feiertag"],
@@ -1255,6 +1334,7 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Marktplatz+71540+Murrhardt",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-murrhardt-stadtfuehrung",
     openingHours: [
       {
         days: ["Sa", "So", "Feiertag"],
@@ -1282,6 +1362,7 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Marktplatz+73207+Plochingen",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-plochingen-offene-stadtfuehrung",
     openingHours: [
       {
         days: ["Sa", "So", "Feiertag"],
@@ -1309,6 +1390,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Marktplatz+71063+Sindelfingen",
+    websiteUrl: "https://www.sindelfingen.de/start.html",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-sindelfingen-stadtfuehrung",
     openingHours: [
       {
         days: ["Sa", "So", "Feiertag"],
@@ -1340,6 +1423,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Jahnstra%C3%9Fe+120%2C+70597+Stuttgart",
+    websiteUrl: "https://www.fernsehturm-stuttgart.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-fernsehturm-stuttgart",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -1368,6 +1453,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Kappelbergstra%C3%9Fe+48%2C+70734+Fellbach",
+    websiteUrl: "http://www.fellbacher-weine.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-fellbacher-weingaertner-eg",
     openingHours: [
       {
         days: ["—"],
@@ -1395,6 +1482,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Hammerschlag+8%2C+73614+Schorndorf",
+    websiteUrl: "https://www.forscherfabrik-schorndorf.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-forscherfabrik-schorndorf-die-science-erlebniswelt-fuer-kinder",
     openingHours: [
       { days: ["Mi", "Do", "Fr"], from: "14:00", to: "18:00" },
       { days: ["Sa", "So", "Feiertag"], from: "10:00", to: "18:00" },
@@ -1418,6 +1507,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=W%C3%BCrttembergstra%C3%9Fe+340%2C+70327+Stuttgart",
+    websiteUrl: "https://www.grabkapelle-rotenberg.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-grabkapelle-auf-dem-wuerttemberg",
     openingHours: [
       { days: ["Mi", "Do", "Fr", "Sa", "So", "Feiertag"], from: "10:00", to: "17:00" },
     ],
@@ -1442,6 +1533,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=K%C3%A4sbr%C3%BCnnlestra%C3%9Fe+20%2C+71063+Sindelfingen",
+    websiteUrl: "https://mbkundencenter.com/#/goto/sindelfingen/besucher",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-mercedes-benz-kundencenter-sindelfingen",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr"],
@@ -1470,6 +1563,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Maienwaldstra%C3%9Fe+2%2C+72555+Metzingen",
+    websiteUrl: "https://www.outletcity.com/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-outletcity-metzingen",
     openingHours: [
       { days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa"], from: "10:00", to: "20:00" },
       {
@@ -1497,6 +1592,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Schlossstra%C3%9Fe+30%2C+71634+Ludwigsburg",
+    websiteUrl: "http://www.schloss-ludwigsburg.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-residenzschloss-ludwigsburg",
     openingHours: [
       {
         days: ["—"],
@@ -1523,6 +1620,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Alfred-Ritter-Stra%C3%9Fe+27%2C+71111+Waldenbuch",
+    websiteUrl: "http://www.ritter-sport.com/de/erleben",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-ritter-sport-schoko-shop",
     openingHours: [
       { days: ["Mo", "Di", "Mi", "Do", "Fr"], from: "10:00", to: "18:00" },
       { days: ["Sa"], from: "10:00", to: "17:00" },
@@ -1547,6 +1646,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Solitude+1%2C+70197+Stuttgart",
+    websiteUrl: "http://www.schloss-solitude.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-schloss-solitude",
     openingHours: [
       { days: ["Mi", "Do", "Fr", "Sa", "So", "Feiertag"], from: "10:00", to: "17:00" },
     ],
@@ -1571,6 +1672,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Treffentrill%2C+74389+Cleebronn",
+    websiteUrl: "http://www.tripsdrill.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-wildparadies-tripsdrill",
     openingHours: [
       {
         days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
@@ -1598,6 +1701,8 @@ export const ATTRACTIONS: Attraction[] = [
     },
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Wilhelma+13%2C+70376+Stuttgart",
+    websiteUrl: "http://www.wilhelma.de/",
+    regionDetailUrl: "https://www.erlebnisregion-stuttgart.de/a-wilhelma-zoo-stuttgart",
     openingHours: [
       {
         days: ["—"],
