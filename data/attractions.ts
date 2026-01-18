@@ -183,36 +183,6 @@ export const ATTRACTIONS: Attraction[] = [
     image: { thumbUrl: "/images/placeholder/wasserspass/hoehenfreibad.jpg" },
   },
 
-  // ✅ Ergänzt
-  {
-    id: "wasserspass-freibad-kirchheim-unter-teck",
-    category: "WASSERSPASS",
-    name: "Freibad Kirchheim unter Teck",
-    shortTitle: "Freibad Kirchheim",
-    included: "Eintritt frei (Tageseintritt)",
-    benefitValue: 4.5,
-    description:
-      "Freibad in Kirchheim unter Teck. Mit der ErlebnisCard ist der Tageseintritt kostenlos.",
-    address: {
-      street: "Jesinger Straße 79",
-      zip: "73230",
-      city: "Kirchheim unter Teck",
-    },
-    mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Jesinger+Stra%C3%9Fe+79%2C+73230+Kirchheim+unter+Teck",
-    openingHours: [
-      {
-        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
-        from: "—",
-        to: "—",
-        note:
-          "Öffnungszeiten sind saison- und wetterabhängig – bitte vorab online prüfen.",
-      },
-    ],
-    seasonNote: "Saisonbetrieb (typisch Mai–September).",
-    image: { thumbUrl: "/images/placeholder/wasserspass/freibad-kirchheim.jpg" },
-  },
-
   {
     id: "wasserspass-mineralbad-berg",
     category: "WASSERSPASS",
@@ -766,35 +736,6 @@ export const ATTRACTIONS: Attraction[] = [
     ],
     image: { thumbUrl: "/images/placeholder/aktiv/sprungbude.jpg" },
   },
-
-  // ✅ Ergänzt
-  {
-    id: "aktiv-sprungbude-stuttgart",
-    category: "AKTIV_UNTERWEGS",
-    name: "Sprungbude Stuttgart",
-    shortTitle: "Sprungbude Stuttgart",
-    included: "60 Minuten Sprungzeit",
-    benefitValue: 15.99,
-    description:
-      "Trampolinpark in Stuttgart. Mit der ErlebnisCard ist eine 60-minütige Sprungzeit inklusive.",
-    address: {
-      street: "Ziegelbrennerstraße 17",
-      zip: "70374",
-      city: "Stuttgart",
-    },
-    mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Ziegelbrennerstra%C3%9Fe+17%2C+70374+Stuttgart",
-    openingHours: [
-      {
-        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
-        from: "—",
-        to: "—",
-        note: "Öffnungszeiten variieren – bitte vorab online prüfen.",
-      },
-    ],
-    image: { thumbUrl: "/images/placeholder/aktiv/sprungbude.jpg" },
-  },
-
   // =========================================================
   // MUSEEN & KULTUR
   // =========================================================
@@ -937,93 +878,6 @@ export const ATTRACTIONS: Attraction[] = [
     image: { thumbUrl: "/images/placeholder/museum/stihl.jpg" },
   },
 
-  // ✅ Ergänzt
-  {
-    id: "museum-schiller-nationalmuseum-marbach",
-    category: "MUSEUM_KULTUR",
-    name: "Schiller-Nationalmuseum in Marbach am Neckar",
-    shortTitle: "Schiller-Nationalmuseum",
-    included: "Eintritt frei",
-    benefitValue: 9,
-    description:
-      "Literaturmuseum in Marbach (DLA). Mit der ErlebnisCard ist der Eintritt kostenlos.",
-    address: {
-      street: "Schillerhöhe 8-10",
-      zip: "71672",
-      city: "Marbach am Neckar",
-    },
-    mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Schillerh%C3%B6he+8-10%2C+71672+Marbach+am+Neckar",
-    openingHours: [
-      {
-        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
-        from: "—",
-        to: "—",
-        note: "Öffnungszeiten variieren – bitte vorab online prüfen.",
-      },
-    ],
-    image: { thumbUrl: "/images/placeholder/museum/schiller-nationalmuseum.jpg" },
-  },
-
-  // ✅ Ergänzt
-  {
-    id: "museum-tobias-mayer-marbach",
-    category: "MUSEUM_KULTUR",
-    name: "Tobias-Mayer Museum Marbach am Neckar",
-    shortTitle: "Tobias-Mayer Museum",
-    included: "Eintritt frei",
-    benefitValue: 6,
-    description:
-      "Museum zu Leben und Werk von Tobias Mayer. Mit der ErlebnisCard ist der Eintritt kostenlos.",
-    address: {
-      street: "Torgasse 13",
-      zip: "71672",
-      city: "Marbach am Neckar",
-    },
-    mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Torgasse+13%2C+71672+Marbach+am+Neckar",
-    openingHours: [
-      {
-        days: ["Do", "Sa", "So", "Feiertag"],
-        from: "—",
-        to: "—",
-        note: "Öffnungszeiten bitte vorab online prüfen.",
-      },
-    ],
-    image: { thumbUrl: "/images/placeholder/museum/tobias-mayer.jpg" },
-  },
-
-  // ✅ Ergänzt
-  {
-    id: "museum-hohenloher-freilandmuseum-schwaebisch-hall",
-    category: "MUSEUM_KULTUR",
-    name: "Hohenloher Freilandmuseum Schwäbisch Hall",
-    shortTitle: "Hohenloher Freilandmuseum",
-    included: "Eintritt frei",
-    benefitValue: 12,
-    description:
-      "Freilichtmuseum in Wackershofen bei Schwäbisch Hall. Mit der ErlebnisCard ist der Eintritt kostenlos.",
-    address: {
-      street: "Moorwiesenweg 1",
-      zip: "74523",
-      city: "Schwäbisch Hall",
-    },
-    mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Moorwiesenweg+1%2C+74523+Schw%C3%A4bisch+Hall",
-    openingHours: [
-      {
-        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
-        from: "—",
-        to: "—",
-        note: "Saison- und tagesabhängig – bitte vorab online prüfen.",
-      },
-    ],
-    seasonNote: "Saisonbetrieb (typisch Frühjahr–Herbst).",
-    image: {
-      thumbUrl: "/images/placeholder/museum/hohenloher-freilandmuseum.jpg",
-    },
-  },
-
   {
     id: "museum-mercedes-benz",
     category: "MUSEUM_KULTUR",
@@ -1135,7 +989,6 @@ export const ATTRACTIONS: Attraction[] = [
     closureNote: "Montags geschlossen.",
     image: { thumbUrl: "/images/placeholder/museum/staatsgalerie.jpg" },
   },
-
   // =========================================================
   // STADTERLEBNIS
   // =========================================================
@@ -1307,489 +1160,475 @@ export const ATTRACTIONS: Attraction[] = [
   },
 
   {
-{
-  id: "stadterlebnis-historische-stadtfuehrung-nuertingen",
-  category: "STADTERLEBNIS",
-  name: "Öffentliche historische Stadtführung Nürtingen",
-  shortTitle: "Stadtführung Nürtingen",
-  included: "Ticket für eine Stadtführung",
-  benefitValue: 0,
-  description:
-    "Historische Stadtführung durch Nürtingen mit Fokus auf Altstadt und Neckar.",
-  address: {
-    street: "Schillerplatz",
-    zip: "72622",
-    city: "Nürtingen",
-  },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Schillerplatz+72622+N%C3%BCrtingen",
-  openingHours: [
-    {
-      days: ["Sa", "So", "Feiertag"],
-      from: "—",
-      to: "—",
-      note:
-        "Führungen finden regelmäßig, aber nicht täglich statt.",
+    id: "stadterlebnis-historische-stadtfuehrung-nuertingen",
+    category: "STADTERLEBNIS",
+    name: "Öffentliche historische Stadtführung Nürtingen",
+    shortTitle: "Stadtführung Nürtingen",
+    included: "Ticket für eine Stadtführung",
+    benefitValue: 0,
+    description:
+      "Historische Stadtführung durch Nürtingen mit Fokus auf Altstadt und Neckar.",
+    address: {
+      street: "Schillerplatz",
+      zip: "72622",
+      city: "Nürtingen",
     },
-  ],
-  image: { thumbUrl: "/images/placeholder/stadt/nuertingen.jpg" },
-},
-
-{
-  id: "stadterlebnis-historische-stadtfuehrung-bad-wildbad",
-  category: "STADTERLEBNIS",
-  name: "Öffentliche historische Stadtführung Bad Wildbad",
-  shortTitle: "Stadtführung Bad Wildbad",
-  included: "Ticket für eine Stadtführung",
-  benefitValue: 0,
-  description:
-    "Historischer Rundgang durch den Kurort Bad Wildbad im Schwarzwald.",
-  address: {
-    street: "Kurplatz",
-    zip: "75323",
-    city: "Bad Wildbad",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Schillerplatz+72622+N%C3%BCrtingen",
+    openingHours: [
+      {
+        days: ["Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Führungen finden regelmäßig, aber nicht täglich statt.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/stadt/nuertingen.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Kurplatz+75323+Bad+Wildbad",
-  openingHours: [
-    {
-      days: ["Sa", "So", "Feiertag"],
-      from: "—",
-      to: "—",
-      note:
-        "Öffentliche Führungen an ausgewählten Terminen.",
-    },
-  ],
-  image: { thumbUrl: "/images/placeholder/stadt/badwildbad.jpg" },
-},
 
-{
-  id: "stadterlebnis-stadtfuehrung-ludwigsburg",
-  category: "STADTERLEBNIS",
-  name: "Stadtführung Ludwigsburg – „Ludwigsburg auf einen Blick“",
-  shortTitle: "Stadtführung Ludwigsburg",
-  included: "Ticket für eine Stadtführung",
-  benefitValue: 0,
-  description:
-    "Kompakte Einführung in die Geschichte der Barockstadt Ludwigsburg.",
-  address: {
-    street: "Marktplatz",
-    zip: "71634",
-    city: "Ludwigsburg",
+  {
+    id: "stadterlebnis-historische-stadtfuehrung-bad-wildbad",
+    category: "STADTERLEBNIS",
+    name: "Öffentliche historische Stadtführung Bad Wildbad",
+    shortTitle: "Stadtführung Bad Wildbad",
+    included: "Ticket für eine Stadtführung",
+    benefitValue: 0,
+    description:
+      "Historischer Rundgang durch den Kurort Bad Wildbad im Schwarzwald.",
+    address: {
+      street: "Kurplatz",
+      zip: "75323",
+      city: "Bad Wildbad",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Kurplatz+75323+Bad+Wildbad",
+    openingHours: [
+      {
+        days: ["Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffentliche Führungen an ausgewählten Terminen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/stadt/badwildbad.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Marktplatz+71634+Ludwigsburg",
-  openingHours: [
-    {
-      days: ["Sa", "So", "Feiertag"],
-      from: "—",
-      to: "—",
-      note:
-        "Regelmäßige Wochenend-Termine; Anmeldung empfohlen.",
-    },
-  ],
-  image: { thumbUrl: "/images/placeholder/stadt/ludwigsburg.jpg" },
-},
 
-{
-  id: "stadterlebnis-stadtfuehrung-murrhardt",
-  category: "STADTERLEBNIS",
-  name: "Stadtführung Murrhardt",
-  shortTitle: "Stadtführung Murrhardt",
-  included: "Ticket für eine Stadtführung",
-  benefitValue: 0,
-  description:
-    "Historischer Rundgang durch die Klosterstadt Murrhardt.",
-  address: {
-    street: "Marktplatz",
-    zip: "71540",
-    city: "Murrhardt",
+  {
+    id: "stadterlebnis-stadtfuehrung-ludwigsburg",
+    category: "STADTERLEBNIS",
+    name: "Stadtführung Ludwigsburg – „Ludwigsburg auf einen Blick“",
+    shortTitle: "Stadtführung Ludwigsburg",
+    included: "Ticket für eine Stadtführung",
+    benefitValue: 9,
+    description:
+      "Kompakte Einführung in die Geschichte der Barockstadt Ludwigsburg.",
+    address: {
+      street: "Marktplatz",
+      zip: "71634",
+      city: "Ludwigsburg",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Marktplatz+71634+Ludwigsburg",
+    openingHours: [
+      {
+        days: ["Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Regelmäßige Wochenend-Termine; Anmeldung empfohlen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/stadt/ludwigsburg.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Marktplatz+71540+Murrhardt",
-  openingHours: [
-    {
-      days: ["Sa", "So", "Feiertag"],
-      from: "—",
-      to: "—",
-      note:
-        "Termine variieren – bitte Tourismus-Info prüfen.",
-    },
-  ],
-  image: { thumbUrl: "/images/placeholder/stadt/murrhardt.jpg" },
-},
 
-{
-  id: "stadterlebnis-stadtfuehrung-plochingen-hundertwasser",
-  category: "STADTERLEBNIS",
-  name: "Stadtführung Plochingen – Hundertwasser",
-  shortTitle: "Stadtführung Plochingen",
-  included: "Ticket für eine Stadtführung",
-  benefitValue: 0,
-  description:
-    "Führung rund um das Hundertwasserhaus und die Altstadt von Plochingen.",
-  address: {
-    street: "Marktplatz",
-    zip: "73207",
-    city: "Plochingen",
+  {
+    id: "stadterlebnis-stadtfuehrung-murrhardt",
+    category: "STADTERLEBNIS",
+    name: "Stadtführung Murrhardt",
+    shortTitle: "Stadtführung Murrhardt",
+    included: "Ticket für eine Stadtführung",
+    benefitValue: 0,
+    description: "Historischer Rundgang durch die Klosterstadt Murrhardt.",
+    address: {
+      street: "Marktplatz",
+      zip: "71540",
+      city: "Murrhardt",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Marktplatz+71540+Murrhardt",
+    openingHours: [
+      {
+        days: ["Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Termine variieren – bitte Tourismus-Info prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/stadt/murrhardt.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Marktplatz+73207+Plochingen",
-  openingHours: [
-    {
-      days: ["Sa", "So", "Feiertag"],
-      from: "—",
-      to: "—",
-      note:
-        "Öffentliche Führungen an ausgewählten Terminen.",
-    },
-  ],
-  image: { thumbUrl: "/images/placeholder/stadt/plochingen.jpg" },
-},
 
-{
-  id: "stadterlebnis-stadtfuehrung-sindelfingen",
-  category: "STADTERLEBNIS",
-  name: "Stadtführung Sindelfingen",
-  shortTitle: "Stadtführung Sindelfingen",
-  included: "Ticket für eine Stadtführung",
-  benefitValue: 0,
-  description:
-    "Stadtführung durch die historische Altstadt und das Fachwerkviertel.",
-  address: {
-    street: "Marktplatz",
-    zip: "71063",
-    city: "Sindelfingen",
+  {
+    id: "stadterlebnis-stadtfuehrung-plochingen-hundertwasser",
+    category: "STADTERLEBNIS",
+    name: "Stadtführung Plochingen – Hundertwasser",
+    shortTitle: "Stadtführung Plochingen",
+    included: "Ticket für eine Stadtführung",
+    benefitValue: 6,
+    description:
+      "Führung rund um das Hundertwasserhaus und die Altstadt von Plochingen.",
+    address: {
+      street: "Marktplatz",
+      zip: "73207",
+      city: "Plochingen",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Marktplatz+73207+Plochingen",
+    openingHours: [
+      {
+        days: ["Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Öffentliche Führungen an ausgewählten Terminen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/stadt/plochingen.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Marktplatz+71063+Sindelfingen",
-  openingHours: [
-    {
-      days: ["Sa", "So", "Feiertag"],
-      from: "—",
-      to: "—",
-      note:
-        "Führungen nur an festen Terminen – bitte vorher prüfen.",
+
+  {
+    id: "stadterlebnis-stadtfuehrung-sindelfingen",
+    category: "STADTERLEBNIS",
+    name: "Stadtführung Sindelfingen",
+    shortTitle: "Stadtführung Sindelfingen",
+    included: "Ticket für eine Stadtführung",
+    benefitValue: 0,
+    description:
+      "Stadtführung durch die historische Altstadt und das Fachwerkviertel.",
+    address: {
+      street: "Marktplatz",
+      zip: "71063",
+      city: "Sindelfingen",
     },
-  ],
-  image: { thumbUrl: "/images/placeholder/stadt/sindelfingen.jpg" },
-},
-
-// =========================================================
-// AUSFLUGSZIELE
-// =========================================================
-
-{
-  id: "ausflug-swr-fernsehturm",
-  category: "AUSFLUGSZIELE",
-  name: "SWR Fernsehturm Stuttgart",
-  shortTitle: "Fernsehturm Stuttgart",
-  included: "Tageskarte",
-  benefitValue: 0,
-  description:
-    "Erster Fernsehturm der Welt aus Stahlbeton mit Aussichtsplattform und Café.",
-  address: {
-    street: "Jahnstraße 120",
-    zip: "70597",
-    city: "Stuttgart",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Marktplatz+71063+Sindelfingen",
+    openingHours: [
+      {
+        days: ["Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Führungen nur an festen Terminen – bitte vorher prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/stadt/sindelfingen.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Jahnstra%C3%9Fe+120%2C+70597+Stuttgart",
-  openingHours: [
-    { days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"], from: "10:00", to: "22:00" },
-  ],
-  closureNote:
-    "Letzte Auffahrt 30 Minuten vor Schließung. Wetter- oder veranstaltungsbedingte Einschränkungen möglich.",
-  image: { thumbUrl: "/images/placeholder/ausflug/fernsehturm.jpg" },
-},
+  // =========================================================
+  // AUSFLUGSZIELE
+  // =========================================================
 
-{
-  id: "ausflug-fellbacher-weingaertner",
-  category: "AUSFLUGSZIELE",
-  name: "Fellbacher Weingärtner eG",
-  shortTitle: "Fellbacher Weingärtner",
-  included: "Teilnahme Kellerblicke",
-  benefitValue: 0,
-  description:
-    "Einblick in den Weinkeller der Fellbacher Weingärtner mit Führung.",
-  address: {
-    street: "Kappelbergstraße 48",
-    zip: "70734",
-    city: "Fellbach",
+  {
+    id: "ausflug-swr-fernsehturm",
+    category: "AUSFLUGSZIELE",
+    name: "SWR Fernsehturm Stuttgart",
+    shortTitle: "Fernsehturm Stuttgart",
+    included: "Tageskarte",
+    benefitValue: 12.5,
+    description:
+      "Erster Fernsehturm der Welt aus Stahlbeton mit Aussichtsplattform und Café.",
+    address: {
+      street: "Jahnstraße 120",
+      zip: "70597",
+      city: "Stuttgart",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Jahnstra%C3%9Fe+120%2C+70597+Stuttgart",
+    openingHours: [
+      { days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"], from: "10:00", to: "22:00" },
+    ],
+    closureNote:
+      "Letzte Auffahrt 30 Minuten vor Schließung. Wetter- oder veranstaltungsbedingte Einschränkungen möglich.",
+    image: { thumbUrl: "/images/placeholder/ausflug/fernsehturm.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Kappelbergstra%C3%9Fe+48%2C+70734+Fellbach",
-  openingHours: [
-    {
-      days: ["—"],
-      from: "—",
-      to: "—",
-      note: "Kellerblicke nur zu festgelegten Terminen – Anmeldung erforderlich.",
-    },
-  ],
-  image: { thumbUrl: "/images/placeholder/ausflug/weingaertner.jpg" },
-},
 
-{
-  id: "ausflug-forscherfabrik-schorndorf",
-  category: "AUSFLUGSZIELE",
-  name: "Forscherfabrik Schorndorf",
-  shortTitle: "Forscherfabrik",
-  included: "3-Stunden-Ticket Erwachsene",
-  benefitValue: 0,
-  description:
-    "Mitmach-Ausstellungen zu Technik und Naturwissenschaften – ideal für Familien.",
-  address: {
-    street: "Hammerschlag 8",
-    zip: "73614",
-    city: "Schorndorf",
+  {
+    id: "ausflug-fellbacher-weingaertner",
+    category: "AUSFLUGSZIELE",
+    name: "Fellbacher Weingärtner eG",
+    shortTitle: "Fellbacher Weingärtner",
+    included: "Teilnahme Kellerblicke",
+    benefitValue: 12,
+    description:
+      "Einblick in den Weinkeller der Fellbacher Weingärtner mit Führung.",
+    address: {
+      street: "Kappelbergstraße 48",
+      zip: "70734",
+      city: "Fellbach",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Kappelbergstra%C3%9Fe+48%2C+70734+Fellbach",
+    openingHours: [
+      {
+        days: ["—"],
+        from: "—",
+        to: "—",
+        note: "Kellerblicke nur zu festgelegten Terminen – Anmeldung erforderlich.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/ausflug/weingaertner.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Hammerschlag+8%2C+73614+Schorndorf",
-  openingHours: [
-    {
-      days: ["Mi", "Do", "Fr"],
-      from: "14:00",
-      to: "18:00",
-    },
-    {
-      days: ["Sa", "So", "Feiertag"],
-      from: "10:00",
-      to: "18:00",
-    },
-  ],
-  closureNote: "Montag und Dienstag geschlossen.",
-  image: { thumbUrl: "/images/placeholder/ausflug/forscherfabrik.jpg" },
-},
 
-{
-  id: "ausflug-grabkapelle-wuerttemberg",
-  category: "AUSFLUGSZIELE",
-  name: "Grabkapelle auf dem Württemberg",
-  shortTitle: "Grabkapelle Württemberg",
-  included: "Eintritt frei",
-  benefitValue: 0,
-  description:
-    "Klassizistisches Mausoleum mit Blick über das Neckartal.",
-  address: {
-    street: "Württembergstraße 340",
-    zip: "70327",
-    city: "Stuttgart",
+  {
+    id: "ausflug-forscherfabrik-schorndorf",
+    category: "AUSFLUGSZIELE",
+    name: "Forscherfabrik Schorndorf",
+    shortTitle: "Forscherfabrik",
+    included: "3-Stunden-Ticket Erwachsene",
+    benefitValue: 5,
+    description:
+      "Mitmach-Ausstellungen zu Technik und Naturwissenschaften – ideal für Familien.",
+    address: {
+      street: "Hammerschlag 8",
+      zip: "73614",
+      city: "Schorndorf",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Hammerschlag+8%2C+73614+Schorndorf",
+    openingHours: [
+      {
+        days: ["Mi", "Do", "Fr"],
+        from: "14:00",
+        to: "18:00",
+      },
+      {
+        days: ["Sa", "So", "Feiertag"],
+        from: "10:00",
+        to: "18:00",
+      },
+    ],
+    closureNote: "Montag und Dienstag geschlossen.",
+    image: { thumbUrl: "/images/placeholder/ausflug/forscherfabrik.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=W%C3%BCrttembergstra%C3%9Fe+340%2C+70327+Stuttgart",
-  openingHours: [
-    {
-      days: ["Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
-      from: "10:00",
-      to: "17:00",
-    },
-  ],
-  seasonNote: "Saisonbetrieb (April–Oktober).",
-  closureNote: "Montag und Dienstag geschlossen.",
-  image: { thumbUrl: "/images/placeholder/ausflug/grabkapelle.jpg" },
-},
 
-{
-  id: "ausflug-mercedes-benz-kundencenter-sindelfingen",
-  category: "AUSFLUGSZIELE",
-  name: "Mercedes-Benz Kundencenter Sindelfingen",
-  shortTitle: "MB Kundencenter",
-  included: "Werkbesichtigung Kompakt Plus oder Intensiv",
-  benefitValue: 0,
-  description:
-    "Geführte Werksbesichtigung durch eines der größten Automobilwerke weltweit.",
-  address: {
-    street: "Käsbrünnlestraße 20",
-    zip: "71063",
-    city: "Sindelfingen",
+  {
+    id: "ausflug-grabkapelle-wuerttemberg",
+    category: "AUSFLUGSZIELE",
+    name: "Grabkapelle auf dem Württemberg",
+    shortTitle: "Grabkapelle Württemberg",
+    included: "Eintritt frei",
+    benefitValue: 4,
+    description: "Klassizistisches Mausoleum mit Blick über das Neckartal.",
+    address: {
+      street: "Württembergstraße 340",
+      zip: "70327",
+      city: "Stuttgart",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=W%C3%BCrttembergstra%C3%9Fe+340%2C+70327+Stuttgart",
+    openingHours: [
+      {
+        days: ["Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "10:00",
+        to: "17:00",
+      },
+    ],
+    seasonNote: "Saisonbetrieb (April–Oktober).",
+    closureNote: "Montag und Dienstag geschlossen.",
+    image: { thumbUrl: "/images/placeholder/ausflug/grabkapelle.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=K%C3%A4sbr%C3%BCnnlestra%C3%9Fe+20%2C+71063+Sindelfingen",
-  openingHours: [
-    {
-      days: ["Mo", "Di", "Mi", "Do", "Fr"],
-      from: "—",
-      to: "—",
-      note:
-        "Werksführungen nur mit vorheriger Buchung zu festen Zeitfenstern.",
-    },
-  ],
-  closureNote:
-    "Keine Führungen an Wochenenden, Feiertagen sowie während Werksferien.",
-  image: { thumbUrl: "/images/placeholder/ausflug/mb-werk.jpg" },
-},
 
-{
-  id: "ausflug-outletcity-metzingen",
-  category: "AUSFLUGSZIELE",
-  name: "OUTLETCITY METZINGEN",
-  shortTitle: "Outletcity Metzingen",
-  included: "VIP-Shopping Day",
-  benefitValue: 0,
-  description:
-    "International bekanntes Outlet mit über 100 Marken.",
-  address: {
-    street: "Maienwaldstraße 2",
-    zip: "72555",
-    city: "Metzingen",
+  {
+    id: "ausflug-mercedes-benz-kundencenter-sindelfingen",
+    category: "AUSFLUGSZIELE",
+    name: "Mercedes-Benz Kundencenter Sindelfingen",
+    shortTitle: "MB Kundencenter",
+    included: "Werkbesichtigung Kompakt Plus oder Intensiv",
+    benefitValue: 0,
+    description:
+      "Geführte Werksbesichtigung durch eines der größten Automobilwerke weltweit.",
+    address: {
+      street: "Käsbrünnlestraße 20",
+      zip: "71063",
+      city: "Sindelfingen",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=K%C3%A4sbr%C3%BCnnlestra%C3%9Fe+20%2C+71063+Sindelfingen",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr"],
+        from: "—",
+        to: "—",
+        note:
+          "Werksführungen nur mit vorheriger Buchung zu festen Zeitfenstern.",
+      },
+    ],
+    closureNote:
+      "Keine Führungen an Wochenenden, Feiertagen sowie während Werksferien.",
+    image: { thumbUrl: "/images/placeholder/ausflug/mb-werk.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Maienwaldstra%C3%9Fe+2%2C+72555+Metzingen",
-  openingHours: [
-    {
-      days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa"],
-      from: "10:00",
-      to: "20:00",
-    },
-    {
-      days: ["So", "Feiertag"],
-      from: "—",
-      to: "—",
-      note: "Sonderöffnungen an verkaufsoffenen Sonntagen.",
-    },
-  ],
-  image: { thumbUrl: "/images/placeholder/ausflug/outletcity.jpg" },
-},
 
-{
-  id: "ausflug-residenzschloss-ludwigsburg",
-  category: "AUSFLUGSZIELE",
-  name: "Residenzschloss Ludwigsburg",
-  shortTitle: "Residenzschloss",
-  included: "Standard-Schlossführung",
-  benefitValue: 0,
-  description:
-    "Eines der größten erhaltenen Barockschlösser Europas.",
-  address: {
-    street: "Schlossstraße 30",
-    zip: "71634",
-    city: "Ludwigsburg",
+  {
+    id: "ausflug-outletcity-metzingen",
+    category: "AUSFLUGSZIELE",
+    name: "OUTLETCITY METZINGEN",
+    shortTitle: "Outletcity Metzingen",
+    included: "VIP-Shopping Day",
+    benefitValue: 0,
+    description: "International bekanntes Outlet mit über 100 Marken.",
+    address: {
+      street: "Maienwaldstraße 2",
+      zip: "72555",
+      city: "Metzingen",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Maienwaldstra%C3%9Fe+2%2C+72555+Metzingen",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa"],
+        from: "10:00",
+        to: "20:00",
+      },
+      {
+        days: ["So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note: "Sonderöffnungen an verkaufsoffenen Sonntagen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/ausflug/outletcity.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Schlossstra%C3%9Fe+30%2C+71634+Ludwigsburg",
-  openingHours: [
-    {
-      days: ["—"],
-      from: "—",
-      to: "—",
-      note:
-        "Schlossführungen zu festen Zeiten; Zeiten variieren saisonal – bitte prüfen.",
+
+  {
+    id: "ausflug-residenzschloss-ludwigsburg",
+    category: "AUSFLUGSZIELE",
+    name: "Residenzschloss Ludwigsburg",
+    shortTitle: "Residenzschloss",
+    included: "Standard-Schlossführung",
+    benefitValue: 10,
+    description: "Eines der größten erhaltenen Barockschlösser Europas.",
+    address: {
+      street: "Schlossstraße 30",
+      zip: "71634",
+      city: "Ludwigsburg",
     },
-  ],
-  seasonNote: "Ganzjährig, saisonabhängige Führungszeiten.",
-  image: { thumbUrl: "/images/placeholder/ausflug/ludwigsburg.jpg" },
-},
-
-{
-  id: "ausflug-ritter-sport-waldenbuch",
-  category: "AUSFLUGSZIELE",
-  name: "Ritter Sport Schokoshop Waldenbuch",
-  shortTitle: "Ritter Sport",
-  included: "5 € Vergütung beim Einkauf (Mindestkaufwert 25 €)",
-  benefitValue: 0,
-  description:
-    "Markenshop mit Schokoladenvielfalt und Erlebnisbereich.",
-  address: {
-    street: "Alfred-Ritter-Straße 27",
-    zip: "71111",
-    city: "Waldenbuch",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Schlossstra%C3%9Fe+30%2C+71634+Ludwigsburg",
+    openingHours: [
+      {
+        days: ["—"],
+        from: "—",
+        to: "—",
+        note:
+          "Schlossführungen zu festen Zeiten; Zeiten variieren saisonal – bitte prüfen.",
+      },
+    ],
+    seasonNote: "Ganzjährig, saisonabhängige Führungszeiten.",
+    image: { thumbUrl: "/images/placeholder/ausflug/ludwigsburg.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Alfred-Ritter-Stra%C3%9Fe+27%2C+71111+Waldenbuch",
-  openingHours: [
-    { days: ["Mo", "Di", "Mi", "Do", "Fr"], from: "10:00", to: "18:00" },
-    { days: ["Sa"], from: "10:00", to: "17:00" },
-  ],
-  closureNote: "Sonntag geschlossen.",
-  image: { thumbUrl: "/images/placeholder/ausflug/ritter.jpg" },
-},
 
-{
-  id: "ausflug-schloss-solitude",
-  category: "AUSFLUGSZIELE",
-  name: "Schloss Solitude",
-  shortTitle: "Schloss Solitude",
-  included: "Eintritt Standardführung",
-  benefitValue: 0,
-  description:
-    "Rokokoschloss mit Panorama-Ausblick westlich von Stuttgart.",
-  address: {
-    street: "Solitude 1",
-    zip: "70197",
-    city: "Stuttgart",
-  },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Solitude+1%2C+70197+Stuttgart",
-  openingHours: [
-    {
-      days: ["Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
-      from: "10:00",
-      to: "17:00",
+  {
+    id: "ausflug-ritter-sport-waldenbuch",
+    category: "AUSFLUGSZIELE",
+    name: "Ritter Sport Schokoshop Waldenbuch",
+    shortTitle: "Ritter Sport",
+    included: "5 € Vergütung beim Einkauf (Mindestkaufwert 25 €)",
+    benefitValue: 5,
+    description: "Markenshop mit Schokoladenvielfalt und Erlebnisbereich.",
+    address: {
+      street: "Alfred-Ritter-Straße 27",
+      zip: "71111",
+      city: "Waldenbuch",
     },
-  ],
-  seasonNote: "Saisonbetrieb April–Oktober.",
-  closureNote: "Montag und Dienstag geschlossen.",
-  image: { thumbUrl: "/images/placeholder/ausflug/solitude.jpg" },
-},
-
-{
-  id: "ausflug-wildparadies-tripsdrill",
-  category: "AUSFLUGSZIELE",
-  name: "Wildparadies Tripsdrill",
-  shortTitle: "Wildparadies Tripsdrill",
-  included: "Wildparadies-Pass",
-  benefitValue: 0,
-  description:
-    "Tierpark mit heimischen Wildtieren, Greifvogelshows und Naturerlebnis.",
-  address: {
-    street: "Treffentrill",
-    zip: "74389",
-    city: "Cleebronn",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Alfred-Ritter-Stra%C3%9Fe+27%2C+71111+Waldenbuch",
+    openingHours: [
+      { days: ["Mo", "Di", "Mi", "Do", "Fr"], from: "10:00", to: "18:00" },
+      { days: ["Sa"], from: "10:00", to: "17:00" },
+    ],
+    closureNote: "Sonntag geschlossen.",
+    image: { thumbUrl: "/images/placeholder/ausflug/ritter.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Treffentrill%2C+74389+Cleebronn",
-  openingHours: [
-    {
-      days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
-      from: "—",
-      to: "—",
-      note:
-        "Ganzjährig geöffnet, Öffnungszeiten variieren saisonal – bitte Website prüfen.",
-    },
-  ],
-  image: { thumbUrl: "/images/placeholder/ausflug/tripsdrill.jpg" },
-},
 
-{
-  id: "ausflug-wilhelma",
-  category: "AUSFLUGSZIELE",
-  name: "Wilhelma Stuttgart",
-  shortTitle: "Wilhelma",
-  included: "Eintritt frei",
-  benefitValue: 0,
-  description:
-    "Zoologisch-botanischer Garten mit historischer Architektur.",
-  address: {
-    street: "Wilhelma 13",
-    zip: "70376",
-    city: "Stuttgart",
+  {
+    id: "ausflug-schloss-solitude",
+    category: "AUSFLUGSZIELE",
+    name: "Schloss Solitude",
+    shortTitle: "Schloss Solitude",
+    included: "Eintritt Standardführung",
+    benefitValue: 7,
+    description:
+      "Rokokoschloss mit Panorama-Ausblick westlich von Stuttgart.",
+    address: {
+      street: "Solitude 1",
+      zip: "70197",
+      city: "Stuttgart",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Solitude+1%2C+70197+Stuttgart",
+    openingHours: [
+      {
+        days: ["Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "10:00",
+        to: "17:00",
+      },
+    ],
+    seasonNote: "Saisonbetrieb April–Oktober.",
+    closureNote: "Montag und Dienstag geschlossen.",
+    image: { thumbUrl: "/images/placeholder/ausflug/solitude.jpg" },
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Wilhelma+13%2C+70376+Stuttgart",
-  openingHours: [
-    {
-      days: ["—"],
-      from: "—",
-      to: "—",
-      note:
-        "Öffnungszeiten variieren stark je nach Jahreszeit – bitte tagesaktuell prüfen.",
-    },
-  ],
-  seasonNote: "Ganzjährig geöffnet.",
-  image: { thumbUrl: "/images/placeholder/ausflug/wilhelma.jpg" },
-},
 
+  {
+    id: "ausflug-wildparadies-tripsdrill",
+    category: "AUSFLUGSZIELE",
+    name: "Wildparadies Tripsdrill",
+    shortTitle: "Wildparadies Tripsdrill",
+    included: "Wildparadies-Pass",
+    benefitValue: 14.5,
+    description:
+      "Tierpark mit heimischen Wildtieren, Greifvogelshows und Naturerlebnis.",
+    address: {
+      street: "Treffentrill",
+      zip: "74389",
+      city: "Cleebronn",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Treffentrill%2C+74389+Cleebronn",
+    openingHours: [
+      {
+        days: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So", "Feiertag"],
+        from: "—",
+        to: "—",
+        note:
+          "Ganzjährig geöffnet, Öffnungszeiten variieren saisonal – bitte Website prüfen.",
+      },
+    ],
+    image: { thumbUrl: "/images/placeholder/ausflug/tripsdrill.jpg" },
+  },
+
+  {
+    id: "ausflug-wilhelma",
+    category: "AUSFLUGSZIELE",
+    name: "Wilhelma Stuttgart",
+    shortTitle: "Wilhelma",
+    included: "Eintritt frei",
+    benefitValue: 23,
+    description:
+      "Zoologisch-botanischer Garten mit historischer Architektur.",
+    address: {
+      street: "Wilhelma 13",
+      zip: "70376",
+      city: "Stuttgart",
+    },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Wilhelma+13%2C+70376+Stuttgart",
+    openingHours: [
+      {
+        days: ["—"],
+        from: "—",
+        to: "—",
+        note:
+          "Öffnungszeiten variieren stark je nach Jahreszeit – bitte tagesaktuell prüfen.",
+      },
+    ],
+    seasonNote: "Ganzjährig geöffnet.",
+    image: { thumbUrl: "/images/placeholder/ausflug/wilhelma.jpg" },
+  },
 ];
 
 export type CategoryKey = AttractionCategory;
